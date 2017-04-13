@@ -1,0 +1,16 @@
+{
+  "name": "divine",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/dev/third-party/",
+    "test",
+    "tests"
+  ]
+}

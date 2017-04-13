@@ -1,0 +1,5 @@
+.idea
+DS_Store
+assets/.tmp
+node_modules
+assets/dev/third-party
