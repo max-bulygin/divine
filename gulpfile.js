@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
+    include = require('gulp-include'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     pump = require('pump'),
@@ -15,6 +16,7 @@ var reload = browserSync.reload;
 gulp.task('scripts', function (cb) {
     pump([
             gulp.src('assets/dev/js/*.js'),
+            include(),
             concat('app.min.js'),
             uglify(),
             gulp.dest('assets/build/js'),

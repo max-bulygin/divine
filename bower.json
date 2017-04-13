@@ -12,5 +12,9 @@
     "assets/dev/third-party/",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "vidbg": "https://github.com/daniellmb/VidBG.git#^0.1.0",
+    "scrollreveal": "^3.3.5"
+  }
 }
