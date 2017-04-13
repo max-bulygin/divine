@@ -6,7 +6,9 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-    pump = require('pump');
+    pump = require('pump'),
+    svgstore = require('gulp-svgstore'),
+    svgmin = require('gulp-svgmin');
 
 var reload = browserSync.reload;
 
@@ -37,7 +39,15 @@ gulp.task('styles', function () {
         .pipe(gulp.dest('assets/build/css/'));
 });
 
-gulp.task('serve', ['styles'], function() {
+// SVG sprites
+gulp.task('svgstore', function () {
+    return gulp.src('assets/dev/img/icons/*.svg')
+        .pipe(svgmin())
+        .pipe(svgstore())
+        .pipe(gulp.dest('assets/dev/img'));
+});
+
+gulp.task('serve', ['scripts', 'styles', 'svgstore'], function() {
     browserSync({
         notify: false,
         logPrefix: 'serve:dev',
@@ -48,5 +58,5 @@ gulp.task('serve', ['styles'], function() {
     gulp.watch(['views/pages/*.html'], reload);
     gulp.watch(['assets/dev/sass/**/*'], ['styles', reload]);
     gulp.watch(['assets/dev/js/**/*.js'], ['scripts', reload]);
-    gulp.watch(['assets/dev/images/**/*'], reload);
+    gulp.watch(['assets/dev/img/**/*'], ['svgstore', reload]);
 });
