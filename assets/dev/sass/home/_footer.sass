@@ -1,0 +1,38 @@
+#main_footer
+  background-color: $footer
+  
+  .footer_btm
+    display: flex
+    background-color: $footer-btm
+    font-family: $font-primary
+    font-size: 16px
+    color: rgba(#fff, .25)
+    text-align: center
+    flex-direction: column
+    padding: 2.25em 0
+    @media (min-width: $atPhoneLg)
+      font-size: 20px
+    @media (min-width: $atLaptops)
+      flex-direction: row
+    nav
+      display: flex
+      justify-content: space-around
+      a
+        text-decoration: none
+        text-transform: uppercase
+        transition: color .5s ease
+        box-sizing: border-box
+        &:hover
+          color: rgba(#fff, .8)
+    div
+      font-size: .8em
+      padding-top: .44em
+      padding-bottom: 1em
+      vertical-align: middle
+      @media (min-width: $atPhoneMd)
+        font-size: 1em
+      @media (min-width: $atPhoneLg)
+        font-size: 1.4em
+    div.badges
+      padding: 2.67em 0
+        

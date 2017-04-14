@@ -433,9 +433,9 @@ template {
   margin-right: auto; }
   @media (min-width: 768px) {
     #reasons .list_container {
-      height: -webkit-calc(40vw + 35px + 20px);
-      height: -moz-calc(40vw + 35px + 20px);
-      height: calc(40vw + 35px + 20px);
+      height: -webkit-calc(40vw + 70px);
+      height: -moz-calc(40vw + 70px);
+      height: calc(40vw + 70px);
       background: url("../img/reasons-bg.png") center center no-repeat;
       -moz-background-size: cover;
         -o-background-size: cover;
@@ -536,8 +536,79 @@ template {
         #reasons .list_container ol li:before {
           font-size: 212px; } }
 
+#main_footer {
+  background-color: #1c1c1c; }
+  #main_footer .footer_btm {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #272727;
+    font-family: "Century Gothic", "Roboto Light", sans-serif;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.25);
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 2.25em 0; }
+    @media (min-width: 640px) {
+      #main_footer .footer_btm {
+        font-size: 20px; } }
+    @media (min-width: 980px) {
+      #main_footer .footer_btm {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+           -moz-box-orient: horizontal;
+           -moz-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row; } }
+    #main_footer .footer_btm nav {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: space-around;
+          -ms-flex-pack: distribute;
+              justify-content: space-around; }
+      #main_footer .footer_btm nav a {
+        text-decoration: none;
+        text-transform: uppercase;
+        -webkit-transition: color .5s ease;
+        -o-transition: color .5s ease;
+        -moz-transition: color .5s ease;
+        transition: color .5s ease;
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box; }
+        #main_footer .footer_btm nav a:hover {
+          color: rgba(255, 255, 255, 0.8); }
+    #main_footer .footer_btm div {
+      font-size: .8em;
+      padding-top: .44em;
+      padding-bottom: 1em;
+      vertical-align: middle; }
+      @media (min-width: 480px) {
+        #main_footer .footer_btm div {
+          font-size: 1em; } }
+      @media (min-width: 640px) {
+        #main_footer .footer_btm div {
+          font-size: 1.4em; } }
+    #main_footer .footer_btm div.badges {
+      padding: 2.67em 0; }
+
 body {
-  overflow-x: hidden; }
+  font-family: "Century Gothic", "Roboto Light", sans-serif; }
+
+a {
+  color: inherit; }
 
 .icon {
   display: inline-block;
@@ -581,7 +652,7 @@ h2 {
   @media (min-width: 480px) {
     h2 {
       font-size: 50px; } }
-  @media (min-width: 600px) {
+  @media (min-width: 640px) {
     h2 {
       font-size: 72px; } }
   @media (min-width: 768px) {
