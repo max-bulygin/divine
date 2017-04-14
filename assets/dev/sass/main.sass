@@ -1,0 +1,59 @@
+@import "base/variables"
+@import "base/mixins"
+@import "../third-party/normalize-scss/sass/normalize/import-now"
+@import "../third-party/anicollection/index.css"
+
+@import "home/reasons"
+@import "home/footer"
+
+body
+  overflow-x: hidden
+
+.icon
+  display: inline-block
+  width: 1em
+  height: 1em
+  position: relative
+
+h2
+  color: $section-header-text
+  font-family: $font-primary
+  font-size: 40px
+  text-transform: uppercase
+  text-align: center
+  position: relative
+  font-weight: 400
+  &:before
+    content: 'divine'
+    color: $black
+    font-size: .333em
+    text-transform: uppercase
+    +centerTransform
+  &:after
+    content: ''
+    background-color: $black
+    display: block
+    width: 60%
+    height: 1px
+    position: absolute
+    top: 50%
+    left: 0
+    z-index: 10
+  &:nth-child(2n):after
+    left: 40%
+    
+  @media (min-width: $atPhoneMd)
+    font-size: 50px
+  
+  @media (min-width: $atPhoneLg)
+    font-size: 72px
+  
+  @media (min-width: $atTablets)
+    font-size: 80px
+    
+  @media (min-width: $atLaptops)
+    font-size: 90px
+  
+  @media (min-width: $atDesktops)
+    font-size: 100px
+    
