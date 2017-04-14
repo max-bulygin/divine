@@ -1,0 +1,80 @@
+#reasons
+  
+  .list_container
+    display: flex
+    width: 80%
+    margin-left: auto
+    margin-right: auto
+    @media (min-width: $atTablets)
+      height: calc(40vw + 35px + 20px) //35px is a half of logo height, 20px one padding
+      background: url("../img/reasons-bg.png") center center no-repeat
+      background-size: cover
+      position: relative
+      
+    .icon
+      display: none
+      @media (min-width: $atTablets)
+        display: inline-block
+        font-size: 70px
+        margin: auto
+    ol
+      margin: 0
+      padding: 0
+      width: 100%
+      counter-reset: section
+      list-style-type: none
+      @media (min-width: $atTablets)
+        height: 100%
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        position: absolute
+        
+      li
+        width: 80vw
+        height: 80vw
+        color: $white
+        text-transform: uppercase
+        text-align: center
+        padding: 20px
+        box-sizing: border-box
+        position: relative
+        +centerFlex
+        
+        &:first-child
+          background-color: $black
+        &:nth-child(2)
+          background: $dark-gold url("../img/list-item-2-bg.png") no-repeat
+        &:last-child
+          background-color: $white
+          color: $black
+        &:before
+          counter-increment: section
+          content: counter(section)
+          color: rgba(#000, .1)
+          font-family: $font-primary
+          font-size: 150px
+          font-weight: 400
+          +centerTransform
+        &:first-child:before
+          color: rgba(#fff, .2)
+        @media (min-width: $atTablets)
+          position: absolute
+          width: 20vw
+          height: 20vw
+          &:first-child
+            top: 0
+            left: 0
+          &:nth-child(2)
+            top: 2.7vw
+            right: 0
+          &:last-child
+            top: calc(50% + 35px)
+            left: calc(50% + 35px)
+          &:before
+            font-size: 170px
+        @media (min-width: $atLaptops)
+          &:before
+            font-size: 212px
+            
