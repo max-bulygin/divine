@@ -1,8 +1,24 @@
 // According to design mockups:
 // $font-primary corresponds to Gill Sans MT
 // $font-secondary corresponds to Proxima Nova A (used for headings, buttons etc.)
-$font-primary: "Century Gothic", "Roboto Light", sans-serif
-$font-secondary: "Century Gothic", "Roboto Light", sans-serif
+
+// THIS FONTS ARE ADDED ONLY FOR DEVELOPMENT PURPOSE. CHANGE TO 'Century Gothic' BEFORE DISTRIBUTION
+@font-face
+  font-family: 'Gill Sans MT'
+  src: url('../fonts/Gill Sans MT/GillSansMT.eot')
+  src: url('../fonts/Gill Sans MT/GillSansMT.eot?#iefix') format("embedded-opentype"), url('../fonts/Gill Sans MT/GillSansMT.woff2') format("woff2"), url('../fonts/Gill Sans MT/GillSansMT.woff') format("woff"), url('../fonts/Gill Sans MT/GillSansMT.ttf') format("truetype"), url('../fonts/Gill Sans MT/GillSansMT.svg#GillSansMT') format("svg")
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'Proxima Nova A'
+  src: url('../fonts/Proxima Nova/ProximaNova-Regular.eot')
+  src: url('../fonts/Proxima Nova/ProximaNova-Regular.eot?#iefix') format("embedded-opentype"), url('ProximaNova-Regular.woff') format("woff"), url('../fonts/Proxima Nova/ProximaNova-Regular.ttf') format("truetype")
+  font-weight: normal
+  font-style: normal
+  
+$font-primary: "Gill Sans MT", "Roboto Light", sans-serif
+$font-secondary: "Proxima Nova A", "Roboto Light", sans-serif
 
 // COLORS
 $dark-gold: #a08f6e
