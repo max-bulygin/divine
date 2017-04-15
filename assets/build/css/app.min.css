@@ -558,19 +558,40 @@ template {
           #reasons .list_container ol li:before {
             font-size: 212px; } }
 
+body {
+  width: 1920px; }
+
 #main_footer {
   background-color: #1c1c1c; }
   @media (min-width: 640px) {
     #main_footer .container {
       padding-left: 50px;
       padding-right: 50px; } }
+  @media (min-width: 980px) {
+    #main_footer .container {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+         -moz-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
   #main_footer .reach_us {
     padding-top: 63px;
     color: #a08f6e; }
+    @media (min-width: 1400px) {
+      #main_footer .reach_us {
+        padding-top: 74px; } }
     #main_footer .reach_us .logo_footer {
       font-size: 60px;
       text-align: center;
       position: relative; }
+      @media (min-width: 1400px) {
+        #main_footer .reach_us .logo_footer {
+          font-size: 70px; } }
       #main_footer .reach_us .logo_footer:before {
         content: '';
         width: 3px;
@@ -580,12 +601,29 @@ template {
         top: -170%;
         left: 50%;
         z-index: 10; }
+        @media (min-width: 1400px) {
+          #main_footer .reach_us .logo_footer:before {
+            top: -67%; } }
       #main_footer .reach_us .logo_footer svg {
         fill: currentColor;
         position: relative; }
+      @media (min-width: 980px) {
+        #main_footer .reach_us .logo_footer {
+          -webkit-box-ordinal-group: 3;
+          -webkit-order: 2;
+             -moz-box-ordinal-group: 3;
+              -ms-flex-order: 2;
+                  order: 2; } }
     #main_footer .reach_us .social {
       margin-top: 60px;
       margin-bottom: 55px; }
+      @media (min-width: 980px) {
+        #main_footer .reach_us .social {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: flex; } }
       #main_footer .reach_us .social h6 {
         text-align: center;
         font-family: "Gill Sans MT", "Roboto Light", sans-serif;
@@ -595,6 +633,11 @@ template {
         color: inherit;
         margin-top: 0;
         margin-bottom: 47px; }
+        @media (min-width: 980px) {
+          #main_footer .reach_us .social h6 {
+            color: #fff; }
+            #main_footer .reach_us .social h6:after {
+              content: ' ON SOCIAL'; } }
       #main_footer .reach_us .social ul {
         margin: 0;
         padding: 0;
@@ -615,6 +658,14 @@ template {
       padding-top: 55px;
       margin-left: -50px;
       margin-right: -50px; }
+      @media (min-width: 980px) {
+        #main_footer .reach_us .newsletter {
+          -webkit-box-ordinal-group: 4;
+          -webkit-order: 3;
+             -moz-box-ordinal-group: 4;
+              -ms-flex-order: 3;
+                  order: 3;
+          border-top: 0; } }
       #main_footer .reach_us .newsletter form {
         text-align: center; }
         #main_footer .reach_us .newsletter form label {
@@ -642,6 +693,8 @@ template {
           position: relative;
           top: 5px;
           left: -8px; }
+          #main_footer .reach_us .newsletter form button:hover {
+            cursor: pointer; }
   #main_footer .more_links {
     padding-top: 64px;
     padding-bottom: 52px; }
@@ -754,9 +807,20 @@ template {
         #main_footer .footer_btm div.copy,
         #main_footer .footer_btm div.design {
           font-size: 1.2em; } }
-    #main_footer .footer_btm div.design a {
-      position: relative;
-      top: 8px; }
+      #main_footer .footer_btm div.copy .icon,
+      #main_footer .footer_btm div.design .icon {
+        fill: currentColor;
+        font-size: 3.9em;
+        height: 30px;
+        position: relative;
+        top: .1em;
+        -webkit-transition: fill .5s ease;
+        -o-transition: fill .5s ease;
+        -moz-transition: fill .5s ease;
+        transition: fill .5s ease; }
+        #main_footer .footer_btm div.copy .icon:hover,
+        #main_footer .footer_btm div.design .icon:hover {
+          fill: rgba(255, 255, 255, 0.8); }
     #main_footer .footer_btm div.badges {
       padding: 4em 0 2.5em; }
 

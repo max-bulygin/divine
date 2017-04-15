@@ -1,3 +1,6 @@
+body
+  width: 1920px
+
 #main_footer
   background-color: $footer
   
@@ -5,14 +8,21 @@
     @media (min-width: $atPhoneLg)
       padding-left: 50px
       padding-right: 50px
-      
+    @media (min-width: $atLaptops)
+      display: flex
+      justify-content: space-between
+  
   .reach_us
     padding-top: 63px
     color: $dark-gold
+    @media (min-width: $atDesktops)
+      padding-top: 74px
     .logo_footer
       font-size: 60px
       text-align: center
       position: relative
+      @media (min-width: $atDesktops)
+        font-size: 70px
       &:before
         content: ''
         width: 3px
@@ -22,12 +32,18 @@
         top: -170%
         left: 50%
         z-index: 10
+        @media (min-width: $atDesktops)
+          top: -67%
       svg
         fill: currentColor
         position: relative
+      @media (min-width: $atLaptops)
+        order: 2
     .social
       margin-top: 60px
       margin-bottom: 55px
+      @media (min-width: $atLaptops)
+        display: flex
       h6
         text-align: center
         font-family: $font-primary
@@ -37,6 +53,10 @@
         color: inherit
         margin-top: 0
         margin-bottom: 47px
+        @media (min-width: $atLaptops)
+          color: $white
+          &:after
+            content: ' ON SOCIAL'
       ul
         margin: 0
         padding: 0
@@ -51,6 +71,9 @@
       padding-top: 55px
       margin-left: -50px
       margin-right: -50px
+      @media (min-width: $atLaptops)
+        order: 3
+        border-top: 0
       form
         text-align: center
         label
@@ -78,7 +101,8 @@
           position: relative
           top: 5px
           left: -8px
-  
+          &:hover
+            cursor: pointer
           
   .more_links
     padding-top: 64px
@@ -142,9 +166,15 @@
         font-size: 1em
       @media (min-width: $atPhoneLg)
         font-size: 1.2em
-    div.design a
-      position: relative
-      top: 8px
+      .icon
+        fill: currentColor
+        font-size: 3.9em
+        height: 30px
+        position: relative
+        top: .1em
+        transition: fill .5s ease
+        &:hover
+          fill: rgba(#fff, .8)
     div.badges
       padding: 4em 0 2.5em
         
