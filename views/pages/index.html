@@ -6,12 +6,61 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.css">
     <link rel="stylesheet" href="css/app.min.css">
 </head>
 <body>
 <h2>villas</h2>
 <h2>collections</h2>
-<h2>destinations</h2>
+
+<section id="destinations">
+
+    <svg class="icon icon-logo">
+        <use xlink:href="img/icons.svg#logo-icon"></use>
+    </svg>
+
+    <h2>destinations</h2>
+
+    <div class="owl-carousel owl-theme">
+
+        <div class="carousel_item">
+            <img src="img/slide-3.jpg" alt="">
+        </div>
+        <div class="carousel_item">
+            <img src="img/slide-3.jpg" alt="">
+        </div>
+        <div class="carousel_item">
+            <img src="img/slide-3.jpg" alt="">
+        </div>
+        <div class="carousel_item">
+            <img src="img/slide-3.jpg" alt="">
+        </div>
+        <div class="carousel_item">
+            <img src="img/slide-3.jpg" alt="">
+        </div>
+
+    </div>
+
+    <div class="actions">
+        <button>
+            <svg class="icon ">
+                <use xlink:href="img/icons.svg#photos-icon"></use>
+            </svg><span> View list destinations</span>
+        </button>
+        <button>
+            <span>View map </span><svg class="icon ">
+            <use xlink:href="img/icons.svg#point-icon"></use>
+        </svg>
+        </button>
+        <button>
+            <span>Draw </span><svg class="icon ">
+            <use xlink:href="img/icons.svg#draw-icon"></use>
+            </svg>
+        </button>
+    </div><!--  /.actions  -->
+
+</section>
 
 <section id="reasons">
 
@@ -29,9 +78,9 @@
             <li>Best PRICEs on high quality properties</li>
         </ol>
 
-    </div>
+    </div><!--  /.list_container  -->
 
-</section>
+</section><!--  /#reasons  -->
 
 <footer id="main_footer">
 
@@ -122,6 +171,50 @@
     </div><!--  /.footer_btm  -->
 
 </footer>
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+<script>
+
+//    var owl = $('.owl-carousel');
+//    owl.owlCarousel({
+//        loop:true,
+//        center:true,
+//        stagePadding: 12,
+////        autoplay: true,
+//        autoplayTimeout:1000,
+//        autoplayHoverPause:false,
+//        responsive:{
+//            0:{
+//                items:1
+//            },
+//            600:{
+//                items:2
+//            },
+//            1000:{
+//                items:3
+//            }
+//        }
+//    });
+//
+//
+//    $('.hover_control_right').on('mouseover',function(){
+////        owl.trigger('refresh.owl.carousel',{rtl:false});
+//        owl.trigger('play.owl.autoplay',[500])
+//    });
+//    $('.hover_control_right').on('mouseout',function(){
+//        owl.trigger('stop.owl.autoplay')
+//    });
+//    $('.hover_control_left').on('mouseover',function(){
+//        owl.trigger('refresh.owl.carousel',{rtl:true});
+//        owl.trigger('play.owl.autoplay',[500])
+//    });
+//    $('.hover_control_left').on('mouseout',function(){
+//        owl.trigger('stop.owl.autoplay')
+//    });
+</script>
 <script src="js/app.min.js"></script>
 </body>
 </html>

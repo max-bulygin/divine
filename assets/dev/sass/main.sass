@@ -3,6 +3,7 @@
 @import "../third-party/normalize-scss/sass/normalize/import-now"
 @import "../third-party/anicollection/index.css"
 
+@import "home/destinations"
 @import "home/reasons"
 @import "home/footer"
 
@@ -58,7 +59,12 @@ h2
     
   @media (min-width: $atLaptops)
     font-size: 90px
+    letter-spacing: 50px
+    &:before
+      font-size: .333em
+      letter-spacing: 22px
   
   @media (min-width: $atDesktops)
     font-size: 100px
+    letter-spacing: 64px
     
