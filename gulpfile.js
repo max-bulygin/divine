@@ -9,6 +9,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     pump = require('pump'),
     svgstore = require('gulp-svgstore'),
+    cheerio = require('gulp-cheerio'),
     svgmin = require('gulp-svgmin');
 
 var reload = browserSync.reload;
@@ -44,6 +45,12 @@ gulp.task('styles', function () {
 // SVG sprites
 gulp.task('svgstore', function () {
     return gulp.src('assets/dev/img/icons/*.svg')
+        .pipe(cheerio({
+            run: function ($) {
+                $('[fill]').removeAttr('fill');
+            },
+            parserOptions: { xmlMode: true }
+        }))
         .pipe(svgmin())
         .pipe(svgstore())
         .pipe(gulp.dest('assets/dev/img'));

@@ -26,24 +26,26 @@ h2
   text-align: center
   position: relative
   font-weight: 400
+  letter-spacing: 7px
   &:before
     content: 'divine'
     color: $black
-    font-size: .333em
+    font-size: .433em
+    letter-spacing: 20px
     text-transform: uppercase
     +centerTransform
   &:after
     content: ''
     background-color: $black
     display: block
-    width: 60%
+    width: 90%
     height: 1px
     position: absolute
     top: 50%
     left: 0
     z-index: 10
   &:nth-child(2n):after
-    left: 40%
+    left: 10%
     
   @media (min-width: $atPhoneMd)
     font-size: 50px

@@ -1,6 +1,112 @@
 #main_footer
   background-color: $footer
   
+  .container
+    @media (min-width: $atPhoneLg)
+      padding-left: 50px
+      padding-right: 50px
+      
+  .reach_us
+    padding-top: 63px
+    color: $dark-gold
+    .logo_footer
+      font-size: 60px
+      text-align: center
+      position: relative
+      &:before
+        content: ''
+        width: 3px
+        height: 128px
+        background-color: $dark-gold
+        position: absolute
+        top: -170%
+        left: 50%
+        z-index: 10
+      svg
+        fill: currentColor
+        position: relative
+    .social
+      margin-top: 60px
+      margin-bottom: 55px
+      h6
+        text-align: center
+        font-family: $font-primary
+        font-size: 24px
+        font-weight: 400
+        text-transform: uppercase
+        color: inherit
+        margin-top: 0
+        margin-bottom: 47px
+      ul
+        margin: 0
+        padding: 0
+        list-style-type: none
+        font-size: 26px
+        display: flex
+        justify-content: space-around
+        svg
+          fill: currentColor
+    .newsletter
+      border-top: 2px solid rgba(#fff, .1)
+      padding-top: 55px
+      margin-left: -50px
+      margin-right: -50px
+      form
+        text-align: center
+        label
+          font-family: $font-primary
+          font-size: 26px
+          font-weight: 400
+          letter-spacing: 1px
+          text-transform: uppercase
+          input
+            color: #0b132f
+            font-size: 18px
+            font-weight: 400
+            padding: 22px 24px
+            background-color: #fff
+            border: 0
+            outline: none
+            margin-top: 25px
+            min-width: 290px
+        button
+          font-size: 30px
+          padding: 13px 13px 14px
+          background-color: #fff
+          border: 0
+          outline: none
+          position: relative
+          top: 5px
+          left: -8px
+  
+          
+  .more_links
+    padding-top: 64px
+    padding-bottom: 52px
+    h5
+      color: #fff
+      font-family: $font-primary
+      font-size: 30px
+      text-transform: uppercase
+      text-align: center
+      margin-top: 0
+      letter-spacing: 1px
+      margin-bottom: 30px
+    nav
+      display: flex
+      flex-wrap: wrap
+      flex-direction: column
+      align-items: center
+      max-width: 600px
+      height: 250px
+      a
+        padding: 10px
+        text-decoration: none
+        color: #a08f6e
+        font-size: 24px
+        text-transform: capitalize
+        margin-bottom: 10px
+        
   .footer_btm
     display: flex
     background-color: $footer-btm
@@ -11,28 +117,34 @@
     flex-direction: column
     padding: 2.25em 0
     @media (min-width: $atPhoneLg)
-      font-size: 20px
+      font-size: 19px !important
     @media (min-width: $atLaptops)
       flex-direction: row
     nav
       display: flex
-      justify-content: space-around
+      justify-content: space-between
       a
         text-decoration: none
         text-transform: uppercase
         transition: color .5s ease
         box-sizing: border-box
+        padding: 10px
         &:hover
           color: rgba(#fff, .8)
-    div
+    div.copy,
+    div.design
       font-size: .8em
       padding-top: .44em
       padding-bottom: 1em
       vertical-align: middle
+      letter-spacing: .7px
       @media (min-width: $atPhoneMd)
         font-size: 1em
       @media (min-width: $atPhoneLg)
-        font-size: 1.4em
+        font-size: 1.2em
+    div.design a
+      position: relative
+      top: 8px
     div.badges
-      padding: 2.67em 0
+      padding: 4em 0 2.5em
         
