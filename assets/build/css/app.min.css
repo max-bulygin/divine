@@ -436,6 +436,192 @@ template {
 [hidden] {
   display: none; }
 
+#collections h5 {
+  color: #fff;
+  font-family: "Gill Sans MT", "Roboto Light", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  margin: 0; }
+
+#collections img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+#collections .container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 84%; }
+  @media (min-width: 768px) {
+    #collections .container {
+      position: relative;
+      height: 59vw;
+      margin-bottom: 12vw; } }
+
+#collections .img_frame {
+  margin-bottom: 65px;
+  position: relative; }
+  @media (min-width: 768px) {
+    #collections .img_frame {
+      position: absolute;
+      margin-bottom: 0; } }
+
+#collections .wf {
+  width: 84vw;
+  height: 89vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+     -moz-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+  @media (min-width: 768px) {
+    #collections .wf {
+      width: 39vw;
+      height: 42vw;
+      top: 0;
+      left: 0; } }
+  #collections .wf .img_wrap {
+    height: 86%;
+    width: 92%; }
+    #collections .wf .img_wrap:before {
+      content: '';
+      background-color: #a08f6e;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 18%;
+      z-index: -1; }
+    #collections .wf .img_wrap h5 {
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translate(-50%, 50%);
+         -moz-transform: translate(-50%, 50%);
+          -ms-transform: translate(-50%, 50%);
+           -o-transform: translate(-50%, 50%);
+              transform: translate(-50%, 50%);
+      bottom: 7%; }
+
+#collections .city {
+  width: 84vw;
+  height: 30vw; }
+  @media (min-width: 768px) {
+    #collections .city {
+      width: 39vw;
+      height: 14vw;
+      right: 0;
+      top: 7.5%; } }
+  #collections .city h5 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center; }
+
+#collections .mountain {
+  width: 65vw;
+  height: 65vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+     -moz-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+  @media (min-width: 768px) {
+    #collections .mountain {
+      width: 28vw;
+      height: 28vw;
+      top: 35%;
+      left: 53.55%; } }
+  #collections .mountain.img_frame {
+    margin-left: auto;
+    margin-right: auto; }
+  #collections .mountain .img_wrap {
+    width: 87%;
+    height: 75%; }
+    #collections .mountain .img_wrap:before {
+      content: '';
+      background-color: #a08f6e;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 9%;
+      z-index: -1; }
+  #collections .mountain h5 {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, 50%);
+       -moz-transform: translate(-50%, 50%);
+        -ms-transform: translate(-50%, 50%);
+         -o-transform: translate(-50%, 50%);
+            transform: translate(-50%, 50%);
+    bottom: 12.5%; }
+
+#collections .ski {
+  width: 84vw;
+  height: 24vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+     -moz-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+  @media (min-width: 768px) {
+    #collections .ski {
+      width: 39vw;
+      height: 14vw;
+      left: 0;
+      bottom: 0; } }
+  #collections .ski .img_wrap {
+    width: 39%;
+    position: relative; }
+    @media (min-width: 768px) {
+      #collections .ski .img_wrap {
+        width: 47%; } }
+    #collections .ski .img_wrap h5 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+         -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+           -o-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      z-index: 10;
+      text-align: center; }
+
 #destinations {
   background: url("../img/destinationimgblured.png") center no-repeat;
   -moz-background-size: cover;
@@ -1068,7 +1254,7 @@ h2 {
   @media (min-width: 980px) {
     h2 {
       font-size: 90px;
-      letter-spacing: 50px; }
+      letter-spacing: 30px; }
       h2:before {
         font-size: .333em;
         letter-spacing: 22px; } }

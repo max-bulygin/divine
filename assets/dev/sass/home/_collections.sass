@@ -1,0 +1,125 @@
+#collections
+  h5
+    color: #fff
+    font-family: $font-primary
+    font-size: 22px
+    font-weight: 400
+    text-transform: uppercase
+    letter-spacing: 10px
+    margin: 0
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    
+  .container
+    margin-left: auto
+    margin-right: auto
+    width: 84%
+    @media(min-width: $atTablets)
+      position: relative
+      height: 59vw
+      margin-bottom: 12vw
+  
+  .img_frame
+    margin-bottom: 65px
+    position: relative
+    @media(min-width: $atTablets)
+      position: absolute
+      margin-bottom: 0
+  
+  .wf
+    width: 84vw
+    height: 89vw
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    @media(min-width: $atTablets)
+      width: 39vw
+      height: 42vw
+      top: 0
+      left: 0
+    .img_wrap
+      height: 86%
+      width: 92%
+      &:before
+        content: ''
+        background-color: $dark-gold
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 18%
+        z-index: -1
+      
+      h5
+        position: absolute
+        left: 50%
+        transform: translate(-50%, 50%)
+        bottom: 7%
+      
+  .city
+    width: 84vw
+    height: 30vw
+    @media(min-width: $atTablets)
+      width: 39vw
+      height: 14vw
+      right: 0
+      top: 7.5%
+    h5
+      +centerTransform
+      z-index: 10
+      text-align: center
+      
+  .mountain
+    width: 65vw
+    height: 65vw
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    @media(min-width: $atTablets)
+      width: 28vw
+      height: 28vw
+      top: 35%
+      left: 53.55%
+    &.img_frame
+      margin-left: auto
+      margin-right: auto
+    .img_wrap
+      width: 87%
+      height: 75%
+      &:before
+        content: ''
+        background-color: $dark-gold
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 9%
+        z-index: -1
+    h5
+      position: absolute
+      left: 50%
+      transform: translate(-50%, 50%)
+      bottom: 12.5%
+      
+  .ski
+    width: 84vw
+    height: 24vw
+    display: flex
+    justify-content: flex-end
+    @media(min-width: $atTablets)
+      width: 39vw
+      height: 14vw
+      left: 0
+      bottom: 0
+    .img_wrap
+      width: 39%
+      position: relative
+      @media(min-width: $atTablets)
+        width: 47%
+      h5
+        +centerTransform
+        z-index: 10
+        text-align: center
+    
