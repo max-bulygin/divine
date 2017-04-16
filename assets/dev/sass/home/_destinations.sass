@@ -1,7 +1,6 @@
 #destinations
   background: url("../img/destinationimgblured.png") center no-repeat
   background-size: cover
-  height: 930px
   position: relative
   
   .icon-logo
@@ -13,7 +12,8 @@
     transform: translateX(-50%)
     
   h2
-    margin-top: 78px
+    margin-top: .55em
+    margin-bottom: 1em
     &:before
       color: $white
     &:after
@@ -21,55 +21,95 @@
       
   .hover_control_left, .hover_control_right
     position: absolute
-    top: 30%
-    width: 100px
-    height: 100px
-    background-color: red
+    top: 34%
+    width: 20%
+    height: 300px
+    background-color: transparent
     z-index: 100
+    @media(min-width: $atLaptops)
+      width: 200px
     
   .hover_control_left
     left: 0
   .hover_control_right
     right: 0
-    
-      
+  
+  .timeline
+    background-color: rgba(#fff, .25)
+    width: 100%
+    height: 1px
+    position: absolute
+    bottom: 30% //relative to #destinations height
+    @media(min-width: $atPhoneSm)
+      bottom: 28.4%
+    @media(min-width: $atPhoneMd) and (max-width: 599px)
+      bottom: 27%
+    @media(min-width: 600px) and (max-width: 639px)
+      bottom: 27.6%
+    @media(min-width: $atPhoneLg) and (max-width: 767px)
+      bottom: 25.5%
+    @media(min-width: $atTablets) and (max-width: 800px)
+      bottom: 25%
+    @media(min-width: 800px)
+      bottom: 24.8%
+    @media(min-width: $atLaptops)
+      bottom: 24.1%
+    @media(min-width: $atDesktops)
+      bottom: 23.3%
+  
   .owl-carousel
-    .owl-item:not(.center)
-      transform: scaleY(.9)
-    //.owl-dots
-    //  position: relative
-    //  margin-top: 100px
-    //  &:before
-    //    content: ''
-    //    background-color: rgba(#fff, .25)
-    //    width: 100%
-    //    height: 1px
-    //    +centerTransform
-    //  .owl-dot
-    //    margin-top: 3px
-    //    position: relative
-    //    z-index: 100
-    //    span
-    //      background-color: #fff
-    //      width: 14px
-    //      height: 14px
-    //    &.active:before
-    //      content: ''
-    //      display: block
-    //      width: 38px
-    //      height: 38px
-    //      border-radius: 50%
-    //      background-color: #3d464f
-    //      border: 1px solid #fff
-    //      z-index: 0
-    //      +centerTransform
-          
+    .owl-item
+      .carousel_item
+        position: relative
+        min-height: 400px
+        @media(min-width: 401px)
+          min-height: 450px
+        @media(min-width: 430px) and (max-width: 479px)
+          min-height: 500px
+        @media(min-width: $atPhoneMd) and (max-width: 599px)
+          min-height: 660px
+        @media(min-width: 800px)
+          min-height: 500px
+        @media(min-width: 801px) and (max-width: 979px)
+          min-height: 560px
+        @media(min-width: $atLaptops)
+          min-height: 480px
+        div
+          color: #fff
+          font-family: $font-primary
+          font-size: 17px
+          text-transform: uppercase
+          position: absolute
+          bottom: 36%
+          left: 50%
+          transform: translateX(-50%)
+        span
+          background-color: #fff
+          width: 14px
+          height: 14px
+          border-radius: 50%
+          display: block
+          position: absolute
+          bottom: 24.88%
+          left: 50%
+          margin-left: -7px
+      &:not(.center) img
+        transform: scaleY(.9)
+      &:nth-child(2n) .carousel_item div
+        bottom: 12%
+      &.center .carousel_item span:before
+        content: ''
+        display: block
+        width: 38px
+        height: 38px
+        border-radius: 50%
+        background-color: #3d464f
+        border: 1px solid #fff
+        z-index: -1
+        +centerTransform
+  
   .actions
     height: 86px
-    position: absolute
-    left: 0
-    right: 0
-    bottom: 0
     background-color: rgba(#333, .5)
     display: flex
     justify-content: center
@@ -80,15 +120,18 @@
       color: rgba(#fff, .35)
       transition: color .5s ease, background-color .5s ease
       font-family: $font-secondary
-      font-size: 17px
+      //font-size: 17px
+      font-size: 14px
       text-transform: uppercase
-      +centerFlex
       border-left: 1px solid rgba(#fff, .3)
       border-right: 1px solid rgba(#fff, .3)
       flex-basis: 210px
       .icon
-        font-size: 2em
+        //font-size: 2em
+        font-size: 2.5em
         fill: currentColor
+        vertical-align: middle
+        //margin-left: 30px
       &:first-child
         flex-basis: 280px
         border-left-width: 2px

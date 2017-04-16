@@ -60,7 +60,7 @@ gulp.task('serve', ['scripts', 'styles', 'svgstore'], function() {
     browserSync({
         notify: false,
         logPrefix: 'serve:dev',
-        server: ['assets/.tmp', 'assets/dev', 'views/pages'],
+        server: ['assets/.tmp', 'assets/dev', 'views/pages', 'assets/dev/third-party'],
         port: 3000
     });
 

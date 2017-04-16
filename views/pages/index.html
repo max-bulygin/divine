@@ -26,21 +26,35 @@
 
         <div class="carousel_item">
             <img src="img/slide-3.jpg" alt="">
+            <div>Mykonos</div>
+            <span></span>
         </div>
         <div class="carousel_item">
             <img src="img/slide-3.jpg" alt="">
+            <div>Mykonos</div>
+            <span></span>
         </div>
         <div class="carousel_item">
             <img src="img/slide-3.jpg" alt="">
+            <div>Mykonos</div>
+            <span></span>
         </div>
         <div class="carousel_item">
             <img src="img/slide-3.jpg" alt="">
+            <div>Mykonos</div>
+            <span></span>
         </div>
         <div class="carousel_item">
             <img src="img/slide-3.jpg" alt="">
+            <div>Mykonos</div>
+            <span></span>
         </div>
 
     </div>
+
+    <div class="hover_control_left"></div>
+    <div class="hover_control_right"></div>
+    <div class="timeline"></div>
 
     <div class="actions">
         <button>
@@ -87,9 +101,11 @@
     <div class="reach_us">
         <div class="container">
             <div class="logo_footer">
-                <svg class="icon">
-                    <use xlink:href="img/icons.svg#logo-icon"></use>
-                </svg>
+                <span>
+                    <svg class="icon">
+                        <use xlink:href="img/icons.svg#logo-icon"></use>
+                    </svg>
+                </span>
             </div><!--  /.logo_footer  -->
             <div class="social">
                 <h6>follow us</h6>
@@ -178,42 +194,57 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
 <script>
 
-//    var owl = $('.owl-carousel');
-//    owl.owlCarousel({
-//        loop:true,
-//        center:true,
-//        stagePadding: 12,
-////        autoplay: true,
-//        autoplayTimeout:1000,
-//        autoplayHoverPause:false,
-//        responsive:{
-//            0:{
-//                items:1
-//            },
-//            600:{
-//                items:2
-//            },
-//            1000:{
-//                items:3
-//            }
-//        }
-//    });
-//
-//
-//    $('.hover_control_right').on('mouseover',function(){
-////        owl.trigger('refresh.owl.carousel',{rtl:false});
-//        owl.trigger('play.owl.autoplay',[500])
-//    });
-//    $('.hover_control_right').on('mouseout',function(){
-//        owl.trigger('stop.owl.autoplay')
-//    });
-//    $('.hover_control_left').on('mouseover',function(){
-//        owl.trigger('refresh.owl.carousel',{rtl:true});
-//        owl.trigger('play.owl.autoplay',[500])
-//    });
-//    $('.hover_control_left').on('mouseout',function(){
-//        owl.trigger('stop.owl.autoplay')
-//    });
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+        loop:true,
+        center:true,
+        stagePadding: 12,
+        autoplay:false,
+        autoplayTimeout:1000,
+        autoplayHoverPause:true,
+        dots: false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            980:{
+                items:3
+            },
+            1400:{
+                items:5
+            }
+        }
+    });
+
+    var $right = $('.hover_control_right');
+    var $left = $('.hover_control_left');
+    var intID;
+
+    $right.on('mouseover',function(){
+        intID = setInterval(function () {
+            owl.trigger('next.owl.carousel', [300]);
+        }, 1000);
+    });
+
+    function stop(int) {
+        clearInterval(int);
+    }
+
+    $right.on('mouseout', function () {
+        stop(intID);
+    });
+
+    $left.on('mouseover',function(){
+        intID = setInterval(function () {
+            owl.trigger('prev.owl.carousel', [300]);
+        }, 1000);
+    });
+    $left.on('mouseout',function(){
+        stop(intID);
+    });
 </script>
 <script src="js/app.min.js"></script>
 </body>
