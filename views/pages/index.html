@@ -11,7 +11,95 @@
     <link rel="stylesheet" href="css/app.min.css">
 </head>
 <body>
-<h2>villas</h2>
+
+<section id="villas">
+
+    <div class="container_no_r_pad">
+        <h3>rent</h3>
+        <div class="sub_head">a divinE property</div>
+        <div class="slider_nav">
+            <span id="rentPrev">&lt;</span>
+            <span id="curNum">2</span>
+            <span id="allNum">/10 villas</span>
+            <span id="rentNext">&gt;</span>
+        </div>
+
+        <div class="owl-carousel non_loop_rent">
+
+            <div class="villa_carousel_item">
+                <div class="villa_view">
+                    <img src="img/villademobuy.jpg" alt="">
+                    <div class="villa_name">Villa Illusion, <span>Mykonos</span></div>
+                </div>
+                <div class="villa_details">
+                    <span>28 guests</span>
+                    <span>10 Baths</span>
+                    <span>3000-7000€ /night</span>
+                    <a href="#">View Villa</a>
+                </div>
+            </div>
+
+            <div class="villa_carousel_item">
+                <div class="villa_view">
+                    <img src="img/villademobuy.jpg" alt="">
+                    <div class="villa_name">Villa Illusion, <span>Mykonos</span></div>
+                </div>
+                <div class="villa_details">
+                    <span>28 guests</span>
+                    <span>10 Baths</span>
+                    <span>3000-7000€ /night</span>
+                    <a href="#">View Villa</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <h2>villas</h2>
+
+    <div class="container_no_l_pad">
+        <h3>buy</h3>
+        <div class="sub_head">a divinE property</div>
+        <div class="slider_nav">
+            <span id="buyPrev">&lt;</span>
+            <span id="curNum">2</span>
+            <span id="allNum">/10 villas</span>
+            <span id="buyNext">&gt;</span>
+        </div>
+
+        <div class="owl-carousel non_loop_buy">
+
+            <div class="villa_carousel_item">
+                <div class="villa_view">
+                    <img src="img/villademorent.jpg" alt="">
+                    <div class="villa_name">Villa Illusion, <span>Mykonos</span></div>
+                </div>
+                <div class="villa_details">
+                    <span>3000-7000€ /night</span>
+                    <span>10 Baths</span>
+                    <span>28 guests</span>
+                    <a href="#">View Villa</a>
+                </div>
+            </div>
+
+            <div class="villa_carousel_item">
+                <div class="villa_view">
+                    <img src="img/villademorent.jpg" alt="">
+                    <div class="villa_name">Villa Illusion, <span>Mykonos</span></div>
+                </div>
+                <div class="villa_details">
+                    <span>3000-7000€ /night</span>
+                    <span>10 Baths</span>
+                    <span>28 guests</span>
+                    <a href="#">View Villa</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
 <section id="collections">
 
     <h2>collections</h2>
@@ -54,7 +142,7 @@
 
     <h2>destinations</h2>
 
-    <div class="owl-carousel owl-theme">
+    <div class="dest owl-carousel owl-theme">
 
         <div class="carousel_item">
             <img src="img/slide-3.jpg" alt="">
@@ -229,7 +317,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
 <script>
 
-    var owl = $('.owl-carousel');
+    var owl = $('.dest');
     owl.owlCarousel({
         loop:true,
         center:true,
@@ -279,6 +367,31 @@
     });
     $left.on('mouseout',function(){
         stop(intID);
+    });
+
+    $('.non_loop_rent').owlCarousel({
+        items:1,
+        loop:false,
+        margin:10,
+        responsive: {
+            640:{
+                items:2,
+                autoWidth: true
+            }
+        }
+    });
+
+    $('.non_loop_buy').owlCarousel({
+        items:1,
+        loop:false,
+        margin:10,
+        rtl: true,
+        responsive: {
+            640:{
+                items:2,
+                autoWidth: true
+            }
+        }
     });
 </script>
 <script src="js/app.min.js"></script>
