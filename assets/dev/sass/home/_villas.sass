@@ -1,11 +1,54 @@
 #villas
+  position: relative
+  &::before
+    +addBgStyling(340px, top)
+    @media(min-width: $atLaptopsMd)
+      height: 193px
+  &::after
+    +addBgStyling(360px, bottom)
+    @media(min-width: $atLaptopsMd)
+      height: 310px
+  
   .container_no_r_pad
     padding-left: 8%
+    overflow: hidden
+    .carousel_control
+      padding-left: 35px
+      &::before
+        content: ''
+        display: block
+        overflow: hidden
+    @media(min-width: $atLaptopsMd)
+      display: flex
+      .carousel_control
+        flex: 1 0 400px
+        padding-left: 0
+      
   .container_no_l_pad
     padding-right: 8%
-  
+    h3, .slider_nav, .sub_head
+      margin-right: 35px
+      text-align: right
+    h3
+      margin-right: .19em
+    .sub_head
+      margin-right: .875em
+    @media(min-width: $atLaptopsMd)
+      display: flex
+      .carousel_control
+        flex: 1 0 400px
+        padding-left: 0
+        order: 2
+        position: relative
+        left: -400px
+      .owl-carousel
+        left: -400px
+
   h2
     display: none
+    @media(min-width: $atLaptopsMd)
+      display: block
+      margin-bottom: 120px
     
   h3
     color: #000
@@ -14,6 +57,9 @@
     letter-spacing: .625em
     font-weight: 700
     margin-bottom: 15px
+    @media(min-width: $atLaptopsMd)
+      font-size: 30px
+      margin-top: 80px
     
   .slider_nav
     font-family: $font-primary
@@ -21,46 +67,44 @@
     font-weight: 400
     color: #000
     margin-bottom: 40px
-    #allNum
+    #rentAllNum, #buyAllNum
       color: $dark-gold
-    #rentNext, #rentPrev
-      font-family: 'Courier New'
-  
+    #rentNext, #rentPrev, #buyNext, #buyPrev
+      font-family: 'Courier New', monospace
+      cursor: pointer
+    #rentNext, #buyNext
+      margin-left: 30px
+    #rentPrev, #buyPrev
+      margin-right: 30px
+    @media(min-width: $atLaptopsMd)
+      margin-top: 125px
   .sub_head
     color: rgba(#000, .4)
     font-size: 24px
     text-transform: uppercase
     letter-spacing: .625em
     margin-bottom: 26px
-    
-  .container_no_r_pad 
-    h3, .slider_nav, .sub_head
-      margin-left: 35px
-      
-  .container_no_l_pad
-    h3, .slider_nav, .sub_head
-      margin-right: 35px
-      text-align: right
-    h3
-      margin-right: .19em
-    .sub_head
-      margin-right: .875em
+    @media(min-width: $atLaptopsMd)
+      font-size: 17px
     
   .villa_view
     position: relative
     img
+      object-fit: cover
       @media(min-width: $atPhoneLg)
-        min-height: 260px
-        min-width: 500px
+        width: 558px
+      @media(min-width: $atLaptopsMd)
+        height: 347px
+        width: 758px
+        
     &:before
       content: ''
       position: absolute
-      background-image: url("..img/gradient.png")
-      display: block
+      height: 100%
       width: 100%
       bottom: 0
-      left: 0
-     
+      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAEOCAYAAABINH3oAAABE0lEQVQ4y41UMa6FMAyzjRAwMHMd7n8dFpBo8wfgN01BegwVaWzHUdMC90c9C+o/aF1Xatu2e2/fd+o4Dg85z5PXUvaWZaH2fVfEpZRuXM6Z1wIAmufZhyklOoiZ3YlpmnyhlJIipITjOHrRAjEzXtxhGJoaZsa49H2vqJJzVqT1fd9wAVBd13kwgAZiZlTXdT6sEnJ7lVN9cUshSVKjHMIAMTO9Jj64ip5brmL7H5A7+1b3aUa/NBOyACiSv3MllQHRt2jgktT/6HmpIBqOp83CeQ4q4ZALBIDidf4UqGYDIslrssOjQNJPXVXNe3naDzdK8Wl5vLwdBWr3RU8x0UqhLtmACUDmOwrPQ2PjmZfiyoV/9QIwmNTz/5gAAAAASUVORK5CYII=) repeat-x bottom left
+  
     .villa_name
       position: absolute
       left: 0

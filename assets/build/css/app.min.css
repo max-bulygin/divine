@@ -735,140 +735,223 @@ template {
   font-weight: normal;
   font-style: normal; }
 
-#villas .container_no_r_pad {
-  padding-left: 8%; }
-
-#villas .container_no_l_pad {
-  padding-right: 8%; }
-
-#villas h2 {
-  display: none; }
-
-#villas h3 {
-  color: #000;
-  font-size: 48px;
-  text-transform: uppercase;
-  letter-spacing: .625em;
-  font-weight: 700;
-  margin-bottom: 15px; }
-
-#villas .slider_nav {
-  font-family: "Gill Sans MT", "Roboto Light", sans-serif;
-  font-size: 25px;
-  font-weight: 400;
-  color: #000;
-  margin-bottom: 40px; }
-  #villas .slider_nav #allNum {
-    color: #a08f6e; }
-  #villas .slider_nav #rentNext, #villas .slider_nav #rentPrev {
-    font-family: 'Courier New'; }
-
-#villas .sub_head {
-  color: rgba(0, 0, 0, 0.4);
-  font-size: 24px;
-  text-transform: uppercase;
-  letter-spacing: .625em;
-  margin-bottom: 26px; }
-
-#villas .container_no_r_pad h3, #villas .container_no_r_pad .slider_nav, #villas .container_no_r_pad .sub_head {
-  margin-left: 35px; }
-
-#villas .container_no_l_pad h3, #villas .container_no_l_pad .slider_nav, #villas .container_no_l_pad .sub_head {
-  margin-right: 35px;
-  text-align: right; }
-
-#villas .container_no_l_pad h3 {
-  margin-right: .19em; }
-
-#villas .container_no_l_pad .sub_head {
-  margin-right: .875em; }
-
-#villas .villa_view {
+#villas {
   position: relative; }
-  @media (min-width: 640px) {
-    #villas .villa_view img {
-      min-height: 260px;
-      min-width: 500px; } }
-  #villas .villa_view:before {
+  #villas::before {
     content: '';
     position: absolute;
-    background-image: url("..img/gradient.png");
-    display: block;
-    width: 100%;
-    bottom: 0;
-    left: 0; }
-  #villas .villa_view .villa_name {
+    left: 0;
+    right: 0;
+    height: 340px;
+    background-color: #f2f2f0;
+    z-index: -1;
+    top: 0;
+    border-bottom: 1px solid #000; }
+    @media (min-width: 1200px) {
+      #villas::before {
+        height: 193px; } }
+  #villas::after {
+    content: '';
     position: absolute;
     left: 0;
-    bottom: 1.5em;
-    font-family: "Proxima Nova A", "Roboto Light", sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 19px;
-    padding-left: 2em; }
-    #villas .villa_view .villa_name span {
-      color: #a08f6e;
-      font-size: 15px; }
-
-#villas .villa_details {
-  padding: .54em;
-  margin-top: .68em;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  color: rgba(51, 51, 51, 0.5);
-  font-family: "Gill Sans MT", "Roboto Light", sans-serif;
-  font-size: 18px; }
-  @media (min-width: 640px) {
-    #villas .villa_details {
-      font-size: 22px; }
-      #villas .villa_details:after {
+    right: 0;
+    height: 360px;
+    background-color: #f2f2f0;
+    z-index: -1;
+    bottom: 0;
+    border-top: 1px solid #000; }
+    @media (min-width: 1200px) {
+      #villas::after {
+        height: 310px; } }
+  #villas .container_no_r_pad {
+    padding-left: 8%;
+    overflow: hidden; }
+    #villas .container_no_r_pad .carousel_control {
+      padding-left: 35px; }
+      #villas .container_no_r_pad .carousel_control::before {
         content: '';
-        -webkit-flex-basis: 100%;
-            -ms-flex-preferred-size: 100%;
-                flex-basis: 100%; } }
-  #villas .villa_details span {
-    display: inline-block;
-    padding-top: .63em;
-    padding-bottom: 1em;
-    margin-bottom: .5em;
-    text-transform: capitalize; }
-    #villas .villa_details span:nth-child(2) {
-      border-right: 2px solid #f2f2f2;
-      border-left: 2px solid #f2f2f2;
-      padding-left: 1.3em;
-      padding-right: 1.3em; }
-  #villas .villa_details a {
-    display: inline-block;
-    background-color: #000;
-    color: #fff;
-    font-family: "Proxima Nova A", "Roboto Light", sans-serif;
-    font-size: .77em;
+        display: block;
+        overflow: hidden; }
+    @media (min-width: 1200px) {
+      #villas .container_no_r_pad {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex; }
+        #villas .container_no_r_pad .carousel_control {
+          -webkit-box-flex: 1;
+          -webkit-flex: 1 0 400px;
+             -moz-box-flex: 1;
+              -ms-flex: 1 0 400px;
+                  flex: 1 0 400px;
+          padding-left: 0; } }
+  #villas .container_no_l_pad {
+    padding-right: 8%; }
+    #villas .container_no_l_pad h3, #villas .container_no_l_pad .slider_nav, #villas .container_no_l_pad .sub_head {
+      margin-right: 35px;
+      text-align: right; }
+    #villas .container_no_l_pad h3 {
+      margin-right: .19em; }
+    #villas .container_no_l_pad .sub_head {
+      margin-right: .875em; }
+    @media (min-width: 1200px) {
+      #villas .container_no_l_pad {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex; }
+        #villas .container_no_l_pad .carousel_control {
+          -webkit-box-flex: 1;
+          -webkit-flex: 1 0 400px;
+             -moz-box-flex: 1;
+              -ms-flex: 1 0 400px;
+                  flex: 1 0 400px;
+          padding-left: 0;
+          -webkit-box-ordinal-group: 3;
+          -webkit-order: 2;
+             -moz-box-ordinal-group: 3;
+              -ms-flex-order: 2;
+                  order: 2;
+          position: relative;
+          left: -400px; }
+        #villas .container_no_l_pad .owl-carousel {
+          left: -400px; } }
+  #villas h2 {
+    display: none; }
+    @media (min-width: 1200px) {
+      #villas h2 {
+        display: block;
+        margin-bottom: 120px; } }
+  #villas h3 {
+    color: #000;
+    font-size: 48px;
     text-transform: uppercase;
-    padding: 1.29em 1.4em;
-    text-decoration: none;
-    -webkit-box-ordinal-group: 2;
-    -webkit-order: 1;
-       -moz-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    margin-left: auto; }
+    letter-spacing: .625em;
+    font-weight: 700;
+    margin-bottom: 15px; }
+    @media (min-width: 1200px) {
+      #villas h3 {
+        font-size: 30px;
+        margin-top: 80px; } }
+  #villas .slider_nav {
+    font-family: "Gill Sans MT", "Roboto Light", sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 40px; }
+    #villas .slider_nav #rentAllNum, #villas .slider_nav #buyAllNum {
+      color: #a08f6e; }
+    #villas .slider_nav #rentNext, #villas .slider_nav #rentPrev, #villas .slider_nav #buyNext, #villas .slider_nav #buyPrev {
+      font-family: 'Courier New', monospace;
+      cursor: pointer; }
+    #villas .slider_nav #rentNext, #villas .slider_nav #buyNext {
+      margin-left: 30px; }
+    #villas .slider_nav #rentPrev, #villas .slider_nav #buyPrev {
+      margin-right: 30px; }
+    @media (min-width: 1200px) {
+      #villas .slider_nav {
+        margin-top: 125px; } }
+  #villas .sub_head {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: .625em;
+    margin-bottom: 26px; }
+    @media (min-width: 1200px) {
+      #villas .sub_head {
+        font-size: 17px; } }
+  #villas .villa_view {
+    position: relative; }
+    #villas .villa_view img {
+      -o-object-fit: cover;
+         object-fit: cover; }
+      @media (min-width: 640px) {
+        #villas .villa_view img {
+          width: 558px; } }
+      @media (min-width: 1200px) {
+        #villas .villa_view img {
+          height: 347px;
+          width: 758px; } }
+    #villas .villa_view:before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      bottom: 0;
+      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAEOCAYAAABINH3oAAABE0lEQVQ4y41UMa6FMAyzjRAwMHMd7n8dFpBo8wfgN01BegwVaWzHUdMC90c9C+o/aF1Xatu2e2/fd+o4Dg85z5PXUvaWZaH2fVfEpZRuXM6Z1wIAmufZhyklOoiZ3YlpmnyhlJIipITjOHrRAjEzXtxhGJoaZsa49H2vqJJzVqT1fd9wAVBd13kwgAZiZlTXdT6sEnJ7lVN9cUshSVKjHMIAMTO9Jj64ip5brmL7H5A7+1b3aUa/NBOyACiSv3MllQHRt2jgktT/6HmpIBqOp83CeQ4q4ZALBIDidf4UqGYDIslrssOjQNJPXVXNe3naDzdK8Wl5vLwdBWr3RU8x0UqhLtmACUDmOwrPQ2PjmZfiyoV/9QIwmNTz/5gAAAAASUVORK5CYII=) repeat-x bottom left; }
+    #villas .villa_view .villa_name {
+      position: absolute;
+      left: 0;
+      bottom: 1.5em;
+      font-family: "Proxima Nova A", "Roboto Light", sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 19px;
+      padding-left: 2em; }
+      #villas .villa_view .villa_name span {
+        color: #a08f6e;
+        font-size: 15px; }
+  #villas .villa_details {
+    padding: .54em;
+    margin-top: .68em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    color: rgba(51, 51, 51, 0.5);
+    font-family: "Gill Sans MT", "Roboto Light", sans-serif;
+    font-size: 18px; }
+    @media (min-width: 640px) {
+      #villas .villa_details {
+        font-size: 22px; }
+        #villas .villa_details:after {
+          content: '';
+          -webkit-flex-basis: 100%;
+              -ms-flex-preferred-size: 100%;
+                  flex-basis: 100%; } }
+    #villas .villa_details span {
+      display: inline-block;
+      padding-top: .63em;
+      padding-bottom: 1em;
+      margin-bottom: .5em;
+      text-transform: capitalize; }
+      #villas .villa_details span:nth-child(2) {
+        border-right: 2px solid #f2f2f2;
+        border-left: 2px solid #f2f2f2;
+        padding-left: 1.3em;
+        padding-right: 1.3em; }
+    #villas .villa_details a {
+      display: inline-block;
+      background-color: #000;
+      color: #fff;
+      font-family: "Proxima Nova A", "Roboto Light", sans-serif;
+      font-size: .77em;
+      text-transform: uppercase;
+      padding: 1.29em 1.4em;
+      text-decoration: none;
+      -webkit-box-ordinal-group: 2;
+      -webkit-order: 1;
+         -moz-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1;
+      margin-left: auto; }
 
 #collections h5 {
   color: #fff;

@@ -8,3 +8,18 @@
   display: flex
   justify-content: center
   align-items: center
+  
+@mixin addBgStyling($height, $position)
+  content: ''
+  position: absolute
+  left: 0
+  right: 0
+  height: $height
+  background-color: #f2f2f0
+  z-index: -1
+  @if($position == top)
+    top: 0
+    border-bottom: 1px solid #000
+  @else
+    bottom: 0
+    border-top: 1px solid #000
