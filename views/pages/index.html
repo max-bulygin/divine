@@ -5,9 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.css">
+    <title>DIVINE</title>
     <link rel="stylesheet" href="css/app.min.css">
 </head>
 <body>
@@ -310,90 +308,6 @@
     </div><!--  /.footer_btm  -->
 
 </footer>
-<script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
-<script>
-
-    var owl = $('.dest');
-    owl.owlCarousel({
-        loop:true,
-        center:true,
-        stagePadding: 12,
-        autoplay:false,
-        autoplayTimeout:1000,
-        autoplayHoverPause:true,
-        dots: false,
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:2
-            },
-            980:{
-                items:3
-            },
-            1400:{
-                items:5
-            }
-        }
-    });
-
-    var $right = $('.hover_control_right');
-    var $left = $('.hover_control_left');
-    var intID;
-
-    $right.on('mouseover',function(){
-        intID = setInterval(function () {
-            owl.trigger('next.owl.carousel', [300]);
-        }, 1000);
-    });
-
-    function stop(int) {
-        clearInterval(int);
-    }
-
-    $right.on('mouseout', function () {
-        stop(intID);
-    });
-
-    $left.on('mouseover',function(){
-        intID = setInterval(function () {
-            owl.trigger('prev.owl.carousel', [300]);
-        }, 1000);
-    });
-    $left.on('mouseout',function(){
-        stop(intID);
-    });
-
-    $('.non_loop_rent').owlCarousel({
-        items:1,
-        loop:false,
-        margin:10,
-        responsive: {
-            640:{
-                items:2,
-                autoWidth: true
-            }
-        }
-    });
-
-    $('.non_loop_buy').owlCarousel({
-        items:1,
-        loop:false,
-        margin:10,
-        rtl: true,
-        responsive: {
-            640:{
-                items:2,
-                autoWidth: true
-            }
-        }
-    });
-</script>
 <script src="js/app.min.js"></script>
 </body>
 </html>
