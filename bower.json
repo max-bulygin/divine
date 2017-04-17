@@ -17,8 +17,7 @@
     "vidbg": "https://github.com/daniellmb/VidBG.git#^0.1.0",
     "scrollreveal": "^3.3.5",
     "normalize-scss": "normalize.scss#^6.0.0",
-    "AniJS": "anijs#^0.9.3",
-    "anicollection": "http://anijs.github.io/lib/anicollection/anicollection.css",
-    "owl.carousel": "^2.2.1"
+    "owl.carousel": "^2.2.1",
+    "parallax": "^2.1.3"
   }
 }

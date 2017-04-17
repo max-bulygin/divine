@@ -2,7 +2,7 @@
 //=require ../third-party/owl.carousel/dist/owl.carousel.min.js
 //=require ../third-party/scrollreveal/dist/scrollreveal.min.js
 //=require ../third-party/vidbg/vidbg.min.js
-//=require ../third-party/AniJS/dist/anijs-min.js
+//=require ../third-party/parallax/deploy/jquery.parallax.min.js
 
 var owl = $('.dest');
 owl.owlCarousel({
@@ -123,3 +123,20 @@ $buyNext.on('click', function () {
     $buy.trigger('next.owl.carousel', [300]);
 });
 
+// SCROLLREVEAL
+
+window.sr = ScrollReveal({
+    viewFactor: 0.8,
+    duration: 500,
+    delay: 300
+});
+sr.reveal('h2');
+sr.reveal('#reasons li');
+sr.reveal('.wf', {delay:200, viewFactor: 0.2});
+sr.reveal('.city', {delay:400});
+sr.reveal('.mountain');
+sr.reveal('.ski');
+
+// PARALLAX
+
+$('#destinations').parallax();
