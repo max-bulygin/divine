@@ -6,6 +6,7 @@
 //THEME
 @import "base/variables"
 @import "base/mixins"
+@import "home/header"
 @import "home/villas"
 @import "home/collections"
 @import "home/destinations"
@@ -23,6 +24,15 @@ a
   width: 1em
   height: 1em
   position: relative
+  
+.logo
+  font-size: 70px
+  display: flex
+  align-items: center
+  .logo_text
+    width: 1.5em
+    height: .57em
+    margin-left: 15px
 
 h2
   color: $section-header-text
@@ -73,4 +83,84 @@ h2
   @media (min-width: $atDesktops)
     font-size: 100px
     letter-spacing: 64px
+  
+// DROPDOWN
+
+$select-color: #000
+$select-background: #fff
+$select-width: 100%
+$select-height: 45px
+
+.select_hidden
+  display: none
+  visibility: hidden
+  padding-right: 10px
+
+.select
+  cursor: pointer
+  display: inline-block
+  position: relative
+  font-size: 16px
+  color: $select-color
+  width: $select-width
+  max-width: 250px
+  height: $select-height
+
+.select_styled
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background-color: $select-background
+  padding: 8px 10px
+  line-height: 30px
+  text-transform: capitalize
+  transition: all 0.2s ease-in
+  &:after
+    content: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"9\" viewBox=\"0 0 16 9\"><path d=\"M8.17 6.65L14.69.13l1.03 1.05-7.53 7.53h-.02L.64 1.18 1.67.13z\"/></svg>')
+    width: 15px
+    height: 9px
+    position: absolute
+    right: 10px
+  
+  &:hover
+    background-color: #f5f5f5
+  
+  &:active, &.active
+    background-color: #f5f5f5
+
+.select_options
+  display: none
+  position: absolute
+  top: 100%
+  right: 0
+  left: 0
+  z-index: 999
+  margin: 0
+  padding: 0
+  list-style: none
+  background-color: #fff
+  border-bottom: 5px solid transparent
+  li
+    margin: 0
+    padding: 12px 0
+    text-indent: 15px
+    transition: all 0.15s ease-in
+    border-left: 5px solid #fff
+    border-right: 5px solid #fff
+    text-transform: capitalize
+    &:hover
+      color: $select-background
+      background-color: #a08f6e
     
+    &[rel="hide"]
+      display: none
+    
+    &[rel="disabled"]
+      color: #c8c8c8
+      font-size: 14px
+      text-transform: uppercase
+      &:hover
+        background-color: transparent
+        cursor: default

@@ -14,10 +14,10 @@
     "tests"
   ],
   "dependencies": {
-    "vidbg": "https://github.com/daniellmb/VidBG.git#^0.1.0",
     "scrollreveal": "^3.3.5",
     "normalize-scss": "normalize.scss#^6.0.0",
     "owl.carousel": "^2.2.1",
-    "parallax": "^2.1.3"
+    "parallax": "^2.1.3",
+    "backgroundVideo": "linnett/backgroundVideo"
   }
 }
