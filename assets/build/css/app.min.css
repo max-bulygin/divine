@@ -1476,9 +1476,11 @@ template {
   #main_footer .reach_us {
     padding-top: 63px;
     color: #a08f6e; }
-    @media (min-width: 1400px) {
+    @media (min-width: 980px) {
       #main_footer .reach_us {
-        padding-top: 74px; } }
+        padding-top: 74px; }
+        #main_footer .reach_us .container div {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1); } }
     #main_footer .reach_us .logo_footer {
       font-size: 60px;
       text-align: center; }
@@ -1493,7 +1495,7 @@ template {
           height: 128px;
           background-color: #a08f6e;
           position: absolute;
-          top: -170%;
+          top: -128px;
           left: 50%;
           z-index: 10; }
       #main_footer .reach_us .logo_footer svg {
@@ -1511,14 +1513,29 @@ template {
       margin-bottom: 55px; }
       @media (min-width: 980px) {
         #main_footer .reach_us .social {
+          margin: 0;
           display: -webkit-box;
           display: -webkit-flex;
           display: -moz-box;
           display: -ms-flexbox;
-          display: flex; } }
+          display: flex;
+          -webkit-box-flex: 2;
+          -webkit-flex: 2;
+             -moz-box-flex: 2;
+              -ms-flex: 2;
+                  flex: 2;
+          -webkit-box-pack: justify;
+          -webkit-justify-content: space-between;
+             -moz-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+             -moz-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; } }
       #main_footer .reach_us .social h6 {
         text-align: center;
-        font-family: "Gill Sans MT", "Roboto Light", sans-serif;
         font-size: 24px;
         font-weight: 400;
         text-transform: uppercase;
@@ -1527,7 +1544,9 @@ template {
         margin-bottom: 47px; }
         @media (min-width: 980px) {
           #main_footer .reach_us .social h6 {
-            color: #fff; }
+            color: #fff;
+            font-size: 18px;
+            margin: 0; }
             #main_footer .reach_us .social h6:after {
               content: ' ON SOCIAL'; } }
       #main_footer .reach_us .social ul {
@@ -1543,53 +1562,116 @@ template {
         -webkit-justify-content: space-around;
             -ms-flex-pack: distribute;
                 justify-content: space-around; }
+        @media (min-width: 980px) {
+          #main_footer .reach_us .social ul {
+            -webkit-box-flex: 2;
+            -webkit-flex: 2;
+               -moz-box-flex: 2;
+                -ms-flex: 2;
+                    flex: 2;
+            padding: 0 10px; } }
         #main_footer .reach_us .social ul svg {
           fill: currentColor; }
     #main_footer .reach_us .newsletter {
       border-top: 2px solid rgba(255, 255, 255, 0.1);
       padding-top: 55px;
       margin-left: -50px;
-      margin-right: -50px; }
+      margin-right: -50px;
+      font-size: 26px; }
       @media (min-width: 980px) {
         #main_footer .reach_us .newsletter {
+          font-size: 18px;
+          padding: 0;
+          margin: 0;
+          border-top: 0;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: flex;
           -webkit-box-ordinal-group: 4;
           -webkit-order: 3;
              -moz-box-ordinal-group: 4;
               -ms-flex-order: 3;
                   order: 3;
-          border-top: 0; } }
+          -webkit-box-flex: 2;
+          -webkit-flex: 2;
+             -moz-box-flex: 2;
+              -ms-flex: 2;
+                  flex: 2;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+             -moz-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-pack: end;
+          -webkit-justify-content: flex-end;
+             -moz-box-pack: end;
+              -ms-flex-pack: end;
+                  justify-content: flex-end;
+          color: #fff; } }
       #main_footer .reach_us .newsletter form {
-        text-align: center; }
+        text-align: center;
+        position: relative;
+        font-size: 22px; }
         #main_footer .reach_us .newsletter form label {
           font-family: "Gill Sans MT", "Roboto Light", sans-serif;
-          font-size: 26px;
           font-weight: 400;
           letter-spacing: 1px;
           text-transform: uppercase; }
+          #main_footer .reach_us .newsletter form label span {
+            display: block; }
+            @media (min-width: 980px) {
+              #main_footer .reach_us .newsletter form label span {
+                display: inline;
+                font-size: 18px;
+                margin-right: 1.5em; } }
           #main_footer .reach_us .newsletter form label input {
             color: #0b132f;
-            font-size: 18px;
+            font-size: .692em;
             font-weight: 400;
-            padding: 22px 24px;
+            padding: .846em .923em;
             background-color: #fff;
             border: 0;
+            -webkit-border-radius: 0;
+               -moz-border-radius: 0;
+                    border-radius: 0;
             outline: none;
-            margin-top: 25px;
-            min-width: 290px; }
+            margin-top: 1em;
+            min-width: 11.15em; }
+            @media (min-width: 980px) {
+              #main_footer .reach_us .newsletter form label input {
+                margin-top: 0; } }
         #main_footer .reach_us .newsletter form button {
-          font-size: 30px;
-          padding: 14px 13px;
+          font-size: 1.15em;
+          padding: .4em 0;
           background-color: #fff;
           border: 0;
           outline: none;
-          position: relative;
-          top: 5px;
-          left: -8px; }
+          position: absolute;
+          bottom: 0;
+          right: 0; }
+          @media (min-width: 980px) {
+            #main_footer .reach_us .newsletter form button {
+              padding: .2em; } }
           #main_footer .reach_us .newsletter form button:hover {
             cursor: pointer; }
   #main_footer .more_links {
     padding-top: 64px;
     padding-bottom: 52px; }
+    #main_footer .more_links div {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+         -moz-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
+    #main_footer .more_links .block_collections,
+    #main_footer .more_links .block_destinations {
+      display: none; }
+      @media (min-width: 980px) {
+        #main_footer .more_links .block_collections,
+        #main_footer .more_links .block_destinations {
+          display: block; } }
     #main_footer .more_links h5 {
       color: #fff;
       font-family: "Gill Sans MT", "Roboto Light", sans-serif;
@@ -1598,7 +1680,10 @@ template {
       text-align: center;
       margin-top: 0;
       letter-spacing: 1px;
-      margin-bottom: 30px; }
+      margin-bottom: 1em; }
+      @media (min-width: 980px) {
+        #main_footer .more_links h5 {
+          font-size: 16px; } }
     #main_footer .more_links nav {
       display: -webkit-box;
       display: -webkit-flex;
@@ -1623,32 +1708,22 @@ template {
       max-width: 600px;
       height: 250px; }
       #main_footer .more_links nav a {
-        padding: 10px;
+        padding: .41em;
         text-decoration: none;
         color: #a08f6e;
         font-size: 24px;
         text-transform: capitalize;
-        margin-bottom: 10px; }
+        margin-bottom: .41em; }
+        @media (min-width: 980px) {
+          #main_footer .more_links nav a {
+            font-size: 14px; } }
   #main_footer .footer_btm {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
     background-color: #272727;
-    font-family: "Gill Sans MT", "Roboto Light", sans-serif;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.25);
     text-align: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-       -moz-box-orient: vertical;
-       -moz-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     padding: 2.25em 0; }
-    @media (min-width: 640px) {
+    @media (min-width: 640px) and (max-width: 979px) {
       #main_footer .footer_btm {
         font-size: 19px !important; } }
     @media (min-width: 980px) {
@@ -1659,7 +1734,12 @@ template {
            -moz-box-orient: horizontal;
            -moz-box-direction: normal;
             -ms-flex-direction: row;
-                flex-direction: row; } }
+                flex-direction: row;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+           -moz-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }
     #main_footer .footer_btm nav {
       display: -webkit-box;
       display: -webkit-flex;
@@ -1671,17 +1751,34 @@ template {
          -moz-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between; }
+      @media (min-width: 980px) {
+        #main_footer .footer_btm nav {
+          -webkit-box-ordinal-group: 3;
+          -webkit-order: 2;
+             -moz-box-ordinal-group: 3;
+              -ms-flex-order: 2;
+                  order: 2;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+             -moz-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-flex: .7;
+          -webkit-flex: .7;
+             -moz-box-flex: .7;
+              -ms-flex: .7;
+                  flex: .7; } }
       #main_footer .footer_btm nav a {
         text-decoration: none;
         text-transform: uppercase;
-        -webkit-transition: color .5s ease;
-        -o-transition: color .5s ease;
-        -moz-transition: color .5s ease;
-        transition: color .5s ease;
         -webkit-box-sizing: border-box;
            -moz-box-sizing: border-box;
                 box-sizing: border-box;
-        padding: 10px; }
+        padding: 10px;
+        -webkit-transition: color .5s ease;
+        -o-transition: color .5s ease;
+        -moz-transition: color .5s ease;
+        transition: color .5s ease; }
         #main_footer .footer_btm nav a:hover {
           color: rgba(255, 255, 255, 0.8); }
     #main_footer .footer_btm div.copy,
@@ -1689,7 +1786,6 @@ template {
       font-size: .8em;
       padding-top: .44em;
       padding-bottom: 1em;
-      vertical-align: middle;
       letter-spacing: .7px; }
       @media (min-width: 480px) {
         #main_footer .footer_btm div.copy,
@@ -1699,13 +1795,28 @@ template {
         #main_footer .footer_btm div.copy,
         #main_footer .footer_btm div.design {
           font-size: 1.2em; } }
+      @media (min-width: 980px) {
+        #main_footer .footer_btm div.copy,
+        #main_footer .footer_btm div.design {
+          font-size: 16px;
+          padding: 0;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+             -moz-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; } }
       #main_footer .footer_btm div.copy .icon,
       #main_footer .footer_btm div.design .icon {
         fill: currentColor;
         font-size: 3.9em;
         height: 30px;
-        position: relative;
         top: .1em;
+        margin-left: .1em;
         -webkit-transition: fill .5s ease;
         -o-transition: fill .5s ease;
         -moz-transition: fill .5s ease;
@@ -1713,8 +1824,27 @@ template {
         #main_footer .footer_btm div.copy .icon:hover,
         #main_footer .footer_btm div.design .icon:hover {
           fill: rgba(255, 255, 255, 0.8); }
+        @media (min-width: 980px) {
+          #main_footer .footer_btm div.copy .icon,
+          #main_footer .footer_btm div.design .icon {
+            top: 0; } }
+    @media (min-width: 980px) {
+      #main_footer .footer_btm div.design {
+        -webkit-box-ordinal-group: 5;
+        -webkit-order: 4;
+           -moz-box-ordinal-group: 5;
+            -ms-flex-order: 4;
+                order: 4; } }
     #main_footer .footer_btm div.badges {
       padding: 4em 0 2.5em; }
+      @media (min-width: 980px) {
+        #main_footer .footer_btm div.badges {
+          -webkit-box-ordinal-group: 4;
+          -webkit-order: 3;
+             -moz-box-ordinal-group: 4;
+              -ms-flex-order: 3;
+                  order: 3;
+          padding: 0; } }
 
 body {
   font-family: "Gill Sans MT", "Roboto Light", sans-serif; }

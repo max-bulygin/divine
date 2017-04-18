@@ -8,12 +8,16 @@
     @media (min-width: $atLaptops)
       display: flex
       justify-content: space-between
+    
   
   .reach_us
     padding-top: 63px
     color: $dark-gold
-    @media (min-width: $atDesktops)
+    @media (min-width: $atLaptops)
       padding-top: 74px
+      .container div
+        border-bottom: 1px solid rgba(#fff, .1)
+      
     .logo_footer
       font-size: 60px
       text-align: center
@@ -27,7 +31,7 @@
           height: 128px
           background-color: $dark-gold
           position: absolute
-          top: -170%
+          top: -128px
           left: 50%
           z-index: 10
       svg
@@ -35,14 +39,18 @@
         position: relative
       @media (min-width: $atLaptops)
         order: 2
+        
     .social
       margin-top: 60px
       margin-bottom: 55px
       @media (min-width: $atLaptops)
+        margin: 0
         display: flex
+        flex: 2
+        justify-content: space-between
+        align-items: center
       h6
         text-align: center
-        font-family: $font-primary
         font-size: 24px
         font-weight: 400
         text-transform: uppercase
@@ -51,6 +59,8 @@
         margin-bottom: 47px
         @media (min-width: $atLaptops)
           color: $white
+          font-size: 18px
+          margin: 0
           &:after
             content: ' ON SOCIAL'
       ul
@@ -60,49 +70,81 @@
         font-size: 26px
         display: flex
         justify-content: space-around
+        @media (min-width: $atLaptops)
+          flex: 2
+          padding: 0 10px
         svg
           fill: currentColor
+          
     .newsletter
       border-top: 2px solid rgba(#fff, .1)
       padding-top: 55px
       margin-left: -50px
       margin-right: -50px
+      font-size: 26px
       @media (min-width: $atLaptops)
-        order: 3
+        font-size: 18px
+        padding: 0
+        margin: 0
         border-top: 0
+        display: flex
+        order: 3
+        flex: 2
+        align-items: center
+        justify-content: flex-end
+        color: #fff
       form
         text-align: center
+        position: relative
+        font-size: 22px
         label
           font-family: $font-primary
-          font-size: 26px
           font-weight: 400
           letter-spacing: 1px
           text-transform: uppercase
+          span
+            display: block
+            @media(min-width: $atLaptops)
+              display: inline
+              font-size: 18px
+              margin-right: 1.5em
           input
             color: #0b132f
-            font-size: 18px
+            font-size: .692em
             font-weight: 400
-            padding: 22px 24px
+            padding: .846em .923em
             background-color: #fff
             border: 0
+            border-radius: 0
             outline: none
-            margin-top: 25px
-            min-width: 290px
+            margin-top: 1em
+            min-width: 11.15em
+            @media(min-width: $atLaptops)
+              margin-top: 0
         button
-          font-size: 30px
-          padding: 14px 13px
+          font-size: 1.15em
+          padding: .4em 0
           background-color: #fff
           border: 0
           outline: none
-          position: relative
-          top: 5px
-          left: -8px
+          position: absolute
+          bottom: 0
+          right: 0
+          @media(min-width: $atLaptops)
+            padding: .2em
           &:hover
             cursor: pointer
           
   .more_links
     padding-top: 64px
     padding-bottom: 52px
+    div
+      flex: 1
+    .block_collections,
+    .block_destinations
+      display: none
+      @media(min-width: $atLaptops)
+        display: block
     h5
       color: #fff
       font-family: $font-primary
@@ -111,7 +153,9 @@
       text-align: center
       margin-top: 0
       letter-spacing: 1px
-      margin-bottom: 30px
+      margin-bottom: 1em
+      @media(min-width: $atLaptops)
+        font-size: 16px
     nav
       display: flex
       flex-wrap: wrap
@@ -120,35 +164,39 @@
       max-width: 600px
       height: 250px
       a
-        padding: 10px
+        padding: .41em
         text-decoration: none
         color: #a08f6e
         font-size: 24px
         text-transform: capitalize
-        margin-bottom: 10px
+        margin-bottom: .41em
+        @media(min-width: $atLaptops)
+          font-size: 14px
         
   .footer_btm
-    display: flex
     background-color: $footer-btm
-    font-family: $font-primary
     font-size: 16px
     color: rgba(#fff, .25)
     text-align: center
-    flex-direction: column
     padding: 2.25em 0
-    @media (min-width: $atPhoneLg)
+    @media (min-width: $atPhoneLg) and (max-width: $atLaptops - 1)
       font-size: 19px !important
     @media (min-width: $atLaptops)
       flex-direction: row
+      justify-content: space-between
     nav
       display: flex
       justify-content: space-between
+      @media (min-width: $atLaptops)
+        order: 2
+        align-items: center
+        flex: .7
       a
         text-decoration: none
         text-transform: uppercase
-        transition: color .5s ease
         box-sizing: border-box
         padding: 10px
+        transition: color .5s ease
         &:hover
           color: rgba(#fff, .8)
     div.copy,
@@ -156,21 +204,34 @@
       font-size: .8em
       padding-top: .44em
       padding-bottom: 1em
-      vertical-align: middle
       letter-spacing: .7px
       @media (min-width: $atPhoneMd)
         font-size: 1em
       @media (min-width: $atPhoneLg)
         font-size: 1.2em
+      @media (min-width: $atLaptops)
+        font-size: 16px
+        padding: 0
+        display: flex
+        align-items: center
       .icon
         fill: currentColor
         font-size: 3.9em
         height: 30px
-        position: relative
         top: .1em
+        margin-left: .1em
         transition: fill .5s ease
         &:hover
           fill: rgba(#fff, .8)
+        @media (min-width: $atLaptops)
+          top: 0
+    div.design
+      @media (min-width: $atLaptops)
+        order: 4
+  
     div.badges
       padding: 4em 0 2.5em
+      @media (min-width: $atLaptops)
+        order: 3
+        padding: 0
         
