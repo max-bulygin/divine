@@ -1702,13 +1702,24 @@ template {
           -ms-flex-pack: justify;
               justify-content: space-between; } }
   #main_footer .reach_us {
-    padding-top: 63px;
+    padding: 63px 50px 0;
     color: #a08f6e; }
     @media (min-width: 980px) {
       #main_footer .reach_us {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+           -moz-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         padding-top: 74px; }
-        #main_footer .reach_us .container div {
-          border-bottom: 1px solid rgba(255, 255, 255, 0.1); } }
+        #main_footer .reach_us > div {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          padding-bottom: 25px !important; } }
     #main_footer .reach_us .logo_footer {
       font-size: 60px;
       text-align: center; }
@@ -1805,6 +1816,8 @@ template {
       padding-top: 55px;
       margin-left: -50px;
       margin-right: -50px;
+      padding-left: 50px;
+      padding-right: 50px;
       font-size: 26px; }
       @media (min-width: 980px) {
         #main_footer .reach_us .newsletter {
@@ -1841,18 +1854,30 @@ template {
       #main_footer .reach_us .newsletter form {
         text-align: center;
         position: relative;
-        font-size: 22px; }
+        font-size: 24px; }
+        @media (min-width: 980px) {
+          #main_footer .reach_us .newsletter form {
+            font-size: 22px; } }
+        @media (min-width: 980px) and (max-width: 1199px) {
+          #main_footer .reach_us .newsletter form {
+            width: 100%; }
+            #main_footer .reach_us .newsletter form input {
+              width: 15em; } }
         #main_footer .reach_us .newsletter form label {
           font-family: "Gill Sans MT", "Roboto Light", sans-serif;
           font-weight: 400;
           letter-spacing: 1px;
           text-transform: uppercase; }
           #main_footer .reach_us .newsletter form label span {
-            display: block; }
+            display: block;
+            margin-bottom: 12px; }
             @media (min-width: 980px) {
               #main_footer .reach_us .newsletter form label span {
-                display: inline;
                 font-size: 18px;
+                margin: 0; } }
+            @media (min-width: 1200px) {
+              #main_footer .reach_us .newsletter form label span {
+                display: inline;
                 margin-right: 1.5em; } }
           #main_footer .reach_us .newsletter form label input {
             color: #0b132f;
@@ -1867,32 +1892,76 @@ template {
             outline: none;
             margin-top: 1em;
             min-width: 11.15em; }
-            @media (min-width: 980px) {
+            @media (min-width: 480px) and (max-width: 979px) {
+              #main_footer .reach_us .newsletter form label input {
+                font-size: 20px; } }
+            @media (min-width: 1200px) {
               #main_footer .reach_us .newsletter form label input {
                 margin-top: 0; } }
         #main_footer .reach_us .newsletter form button {
-          font-size: 1.15em;
+          font-size: .9em;
           padding: .4em 0;
           background-color: #fff;
           border: 0;
           outline: none;
           position: absolute;
-          bottom: 0;
-          right: 0; }
+          bottom: 2px;
+          left: -webkit-calc(50% + 3.6em);
+          left: -moz-calc(50% + 3.6em);
+          left: calc(50% + 3.6em); }
+          #main_footer .reach_us .newsletter form button .icon {
+            fill: #cbc2b3; }
+          @media (min-width: 480px) {
+            #main_footer .reach_us .newsletter form button {
+              font-size: 1.14em; } }
+          @media (min-width: 480px) and (max-width: 979px) {
+            #main_footer .reach_us .newsletter form button {
+              top: initial;
+              bottom: 2px;
+              left: -webkit-calc(50% + 3.5em);
+              left: -moz-calc(50% + 3.5em);
+              left: calc(50% + 3.5em); } }
+          @media (min-width: 980px) and (max-width: 1199px) {
+            #main_footer .reach_us .newsletter form button {
+              left: -webkit-calc(50% + 3.6em);
+              left: -moz-calc(50% + 3.6em);
+              left: calc(50% + 3.6em);
+              top: -webkit-calc(50% + 0.13em);
+              top: -moz-calc(50% + 0.13em);
+              top: calc(50% + 0.13em); } }
           @media (min-width: 980px) {
             #main_footer .reach_us .newsletter form button {
-              padding: .2em; } }
+              padding: 0 .2em; } }
+          @media (min-width: 1200px) {
+            #main_footer .reach_us .newsletter form button {
+              top: -webkit-calc(50% - .57em);
+              top: -moz-calc(50% - .57em);
+              top: calc(50% - .57em);
+              left: auto;
+              right: 0; } }
           #main_footer .reach_us .newsletter form button:hover {
             cursor: pointer; }
   #main_footer .more_links {
-    padding-top: 64px;
-    padding-bottom: 52px; }
-    #main_footer .more_links div {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1;
-         -moz-box-flex: 1;
-          -ms-flex: 1;
-              flex: 1; }
+    padding: 64px 50px 52px;
+    background: url("../img/continents.svg") center bottom no-repeat; }
+    @media (min-width: 980px) {
+      #main_footer .more_links {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+           -moz-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+        #main_footer .more_links div {
+          -webkit-box-flex: 1;
+          -webkit-flex: 1;
+             -moz-box-flex: 1;
+              -ms-flex: 1;
+                  flex: 1; } }
     #main_footer .more_links .block_collections,
     #main_footer .more_links .block_destinations {
       display: none; }
@@ -1911,7 +1980,9 @@ template {
       margin-bottom: 1em; }
       @media (min-width: 980px) {
         #main_footer .more_links h5 {
-          font-size: 16px; } }
+          font-size: 16px;
+          text-align: left;
+          margin-bottom: 2em; } }
     #main_footer .more_links nav {
       display: -webkit-box;
       display: -webkit-flex;
@@ -1920,31 +1991,45 @@ template {
       display: flex;
       -webkit-flex-wrap: wrap;
           -ms-flex-wrap: wrap;
-              flex-wrap: wrap;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-         -moz-box-orient: vertical;
-         -moz-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-         -moz-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      max-width: 600px;
-      height: 250px; }
+              flex-wrap: wrap; }
       #main_footer .more_links nav a {
         padding: .41em;
         text-decoration: none;
+        text-align: center;
         color: #a08f6e;
         font-size: 24px;
         text-transform: capitalize;
-        margin-bottom: .41em; }
-        @media (min-width: 980px) {
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1 0 100%;
+           -moz-box-flex: 1;
+            -ms-flex: 1 0 100%;
+                flex: 1 0 100%; }
+      @media (min-width: 640px) and (max-width: 980px) {
+        #main_footer .more_links nav {
+          width: 62.5%;
+          margin: 0 auto; } }
+      @media (min-width: 425px) {
+        #main_footer .more_links nav a {
+          -webkit-flex-basis: 50%;
+              -ms-flex-preferred-size: 50%;
+                  flex-basis: 50%;
+          margin-bottom: .41em;
+          text-align: left; } }
+      @media (min-width: 980px) {
+        #main_footer .more_links nav {
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+             -moz-box-orient: horizontal;
+             -moz-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row; }
           #main_footer .more_links nav a {
-            font-size: 14px; } }
+            font-size: 14px;
+            margin-bottom: 1em; } }
   #main_footer .footer_btm {
     background-color: #272727;
     font-size: 16px;
