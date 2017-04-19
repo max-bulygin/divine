@@ -1943,7 +1943,7 @@ template {
             cursor: pointer; }
   #main_footer .more_links {
     padding: 64px 50px 52px;
-    background: url("../img/continents.svg") center bottom no-repeat; }
+    background: url("../img/continents.svg") center bottom fixed no-repeat; }
     @media (min-width: 980px) {
       #main_footer .more_links {
         display: -webkit-box;
