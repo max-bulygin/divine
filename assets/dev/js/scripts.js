@@ -150,6 +150,18 @@ sr.reveal('.wf', {delay:200, viewFactor: 0.2});
 sr.reveal('.city', {delay:400});
 sr.reveal('.mountain');
 sr.reveal('.ski');
+sr.reveal('.first_rent', {
+    origin: 'right',
+    distance: '300px',
+    delay: 0,
+    viewFactor: 0.2
+});
+sr.reveal('.first_buy', {
+    origin: 'left',
+    distance: '300px',
+    delay: 0,
+    viewFactor: 0.2
+});
 
 // PARALLAX
 
