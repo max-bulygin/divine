@@ -29,6 +29,20 @@ owl.owlCarousel({
     }
 });
 
+// Change bg for section
+
+$destBg = $('.dest_bg');
+
+function revealBg() {
+    $imgSrc = $('.owl-item.center img').attr('src');
+    $destBg.css('background-image', 'url("' + $imgSrc + '")');
+}
+
+owl.on('initialized.owl.carousel', revealBg());
+owl.on('translated.owl.carousel', revealBg);
+
+// Control hover slide change
+
 var $right = $('.hover_control_right');
 var $left = $('.hover_control_left');
 var intID;
@@ -139,7 +153,7 @@ sr.reveal('.ski');
 
 // PARALLAX
 
-$('#destinations').parallax();
+// $('#destinations').parallax();
 
 // VIDEO PARALLAX
 

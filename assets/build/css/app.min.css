@@ -1030,6 +1030,8 @@ template {
           left: -400px; } }
   #villas h2 {
     display: none; }
+    #villas h2::after {
+      left: 10%; }
     @media (min-width: 1200px) {
       #villas h2 {
         display: block;
@@ -1356,11 +1358,26 @@ template {
         text-align: center; }
 
 #destinations {
-  -moz-background-size: cover;
-    -o-background-size: cover;
-       background-size: cover;
-  background: url("../img/destinationimgblured.png") no-repeat fixed center;
   position: relative; }
+  #destinations .dest_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    -moz-background-size: cover;
+      -o-background-size: cover;
+         background-size: cover;
+    -webkit-transition: background .5s linear;
+    -o-transition: background .5s linear;
+    -moz-transition: background .5s linear;
+    transition: background .5s linear;
+    -webkit-filter: blur(20px);
+            filter: blur(20px); }
   #destinations .icon-logo {
     font-size: 70px;
     fill: #fff;
@@ -1509,7 +1526,8 @@ template {
     -webkit-justify-content: center;
        -moz-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center; }
+            justify-content: center;
+    position: relative; }
     #destinations .actions button {
       border: 0;
       outline: 0;

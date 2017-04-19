@@ -1,7 +1,20 @@
 #destinations
-  background-size: cover
-  background: url("../img/destinationimgblured.png") no-repeat fixed center
+  //background: url("../img/destinationimgblured.png") center
   position: relative
+  
+  .dest_bg
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    overflow: hidden
+    background-position: center center
+    background-attachment: fixed
+    background-repeat: no-repeat
+    background-size: cover
+    transition: background .5s linear
+    filter: blur(20px)
   
   .icon-logo
     font-size: 70px
@@ -114,6 +127,7 @@
     background-color: rgba(#333, .5)
     display: flex
     justify-content: center
+    position: relative
     button
       border: 0
       outline: 0
