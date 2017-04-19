@@ -4,6 +4,23 @@
 //=require ../third-party/backgroundVideo/dist/backgroundVideo.js
 //=require ../third-party/parallax/deploy/jquery.parallax.min.js
 
+// MENU
+
+$menuToggle = $('#menu_toggle');
+$menu = $('.menu');
+
+$menuToggle.on('click', function () {
+    $menu.addClass('active');
+});
+
+$(document).on("click", function(event){
+    if($menuToggle !== event.target && !$menuToggle.has(event.target).length){
+        $menu.removeClass('active');
+    }
+});
+
+// DESTINATIONS
+
 var owl = $('.dest');
 owl.owlCarousel({
     loop: true,
