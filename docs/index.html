@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DIVINE</title>
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+
+<section id="header">
+
+    <div class="bv_video_wrapper">
+        <video class="bv-video"></video>
+    </div>
+
+    <header>
+
+        <div class="logo">
+            <svg class="icon logo_icon">
+                <use xlink:href="img/icons.svg#logo-icon"></use>
+            </svg>
+            <svg class="icon logo_text">
+                <use xlink:href="img/icons.svg#divine-text"></use>
+            </svg>
+        </div>
+
+        <div class="search_form">
+
+            <div id="search_toggle">
+                <svg class="icon">
+                    <use xlink:href="img/icons.svg#search-icon"></use>
+                </svg>
+            </div>
+
+            <form action="#">
+                <div class="search_select">
+                    <span>Status</span>
+                    <select id="status">
+                        <option value="hide">Buy or Rent</option>
+                        <option value="disabled" disabled>Our Offers</option>
+                        <option value="Mykonos">for rent</option>
+                        <option value="Paros">for buy</option>
+                    </select>
+                </div>
+                <div class="search_select">
+                    <span>Where</span>
+                    <select id="destination">
+                        <option value="hide">Region, Destination</option>
+                        <option value="disabled" disabled>Top Destinations</option>
+                        <option value="Mykonos">Mykonos</option>
+                        <option value="Paros">Paros</option>
+                        <option value="Santorini">Santorini</option>
+                        <option value="Athens">Athens</option>
+                        <option value="London">London</option>
+                    </select>
+                </div>
+                <div class="search_select">
+                    <span>How many Guests</span>
+                    <select id="guests">
+                        <option value="hide">Visitors</option>
+                        <option value="disabled" disabled>Choose options</option>
+                        <option value="Mykonos">3 Guests, 1 infant</option>
+                        <option value="Paros">2 Guests, 2 infant</option>
+                        <option value="Santorini">4 Guests, no infant</option>
+                    </select>
+                </div>
+                <button>
+                    Find your Divine property
+                </button>
+            </form>
+
+        </div>
+
+        <div id="menu_toggle">
+            <svg class="icon ">
+                <use xlink:href="img/icons.svg#menu-toggle-icon"></use>
+            </svg>
+        </div>
+
+        <div class="menu" id="main_menu">
+
+            <div class="menu_head">
+
+                <svg class="icon icon_text">
+                    <use xlink:href="img/icons.svg#divine-text"></use>
+                </svg>
+
+                <a href="callto:899998887878">
+                    <svg class="icon ">
+                        <use xlink:href="img/icons.svg#callus-icon"></use>
+                    </svg>
+                </a>
+
+            </div>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Buy</a></li>
+                <li><a href="#">Rent</a></li>
+                <li><a href="#">Manage</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+        </div>
+
+    </header>
+
+    <div class="aside_links">
+
+        <a href="callto:899998887878">
+            <svg class="icon ">
+                <use xlink:href="img/icons.svg#callus-icon"></use>
+            </svg>
+        </a>
+        <a href="#">
+            <svg class="icon ">
+                <use xlink:href="img/icons.svg#destinations-icon"></use>
+            </svg>
+        </a>
+
+    </div>
+
+    <h1>top divinE properties</h1>
+
+    <div class="alt_hero_links">
+        <span>Top destinations /</span>
+        <nav>
+            <a href="#">Mykonos</a>
+            <a href="#">Paros</a>
+            <a href="#">Santorini</a>
+            <a href="#">London</a>
+        </nav>
+    </div>
+
+    <div class="scroll">Scroll</div>
+
+</section>
+
+<section id="villas">
+
+    <div class="container_no_r_pad">
+        <div class="carousel_control cc_rent">
+            <h3>rent</h3>
+            <div class="sub_head">a divinE property</div>
+            <div class="slider_nav">
+                <span id="rentPrev" role="button">&lt;</span>
+                <span id="rentCurNum">2</span>
+                <span id="rentAllNum"> /10 villas</span>
+                <span id="rentNext" role="button">&gt;</span>
+            </div>
+        </div>
+
+        <div class="owl-carousel non_loop_rent">
+
+            <div class="villa_carousel_item first_rent" itemscope itemtype="http://schema.org/Offer">
+                <div class="villa_view">
+                    <img src="img/villademobuy.jpg" alt="" itemprop="image">
+                    <div class="villa_name" itemprop="name">Villa Illusion, <span>Mykonos</span></div>
+                </div>
+                <div class="villa_details">
+                    <span>28 guests</span>
+                    <span>10 Baths</span>
+                    <span itemprop="price">3000-7000€ /night</span>
+                    <a href="#">View Villa</a>
+                </div>
+            </div>
+
+            <div class="villa_carousel_item" itemscope itemtype="http://schema.org/Offer">
+                <div class="villa_view">
+                    <img src="img/villademobuy.jpg" alt="" itemprop="image">
+                    <div class="villa_name" itemprop="name">Villa Illusion, <span>Mykonos</span></div>
+                </div>
+                <div class="villa_details">
+                    <span>28 guests</span>
+                    <span>10 Baths</span>
+                    <span itemprop="price">3000-7000€ /night</span>
+                    <a href="#">View Villa</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <h2>villas</h2>
+
+    <div class="container_no_l_pad">
+        <div class="carousel_control cc_buy">
+            <h3>buy</h3>
+            <div class="sub_head">a divinE property</div>
+            <div class="slider_nav">
+                <span id="buyPrev" role="button">&lt;</span>
+                <span id="buyCurNum">2</span>
+                <span id="buyAllNum"> /10 villas</span>
+                <span id="buyNext" role="button">&gt;</span>
+            </div>
+        </div>
+
+        <div class="owl-carousel non_loop_buy">
+
+            <div class="villa_carousel_item first_buy" itemscope itemtype="http://schema.org/Offer">
+                <div class="villa_view">
+                    <img src="img/villademorent.jpg" alt="" itemprop="image">
+                    <div class="villa_name" itemprop="name">Villa Illusion, <span>Mykonos</span></div>
+                </div>
+                <div class="villa_details">
+                    <span itemprop="price">3000-7000€ /night</span>
+                    <span>10 Baths</span>
+                    <span>28 guests</span>
+                    <a href="#">View Villa</a>
+                </div>
+            </div>
+
+            <div class="villa_carousel_item" itemscope itemtype="http://schema.org/Offer">
+                <div class="villa_view">
+                    <img src="img/villademorent.jpg" alt="" itemprop="image">
+                    <div class="villa_name" itemprop="name">Villa Illusion, <span>Mykonos</span></div>
+                </div>
+                <div class="villa_details">
+                    <span itemprop="price">3000-7000€ /night</span>
+                    <span>10 Baths</span>
+                    <span>28 guests</span>
+                    <a href="#">View Villa</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<section id="collections">
+
+    <h2>collections</h2>
+
+    <div class="container">
+        <div class="img_frame wf">
+            <div class="img_wrap">
+                <h5>waterfront</h5>
+                <img src="img/wf.jpg" alt="">
+            </div>
+        </div>
+        <div class="img_frame city">
+            <div class="img_wrap">
+                <h5>close to city</h5>
+                <img src="img/city.jpg" alt="">
+            </div>
+        </div>
+        <div class="img_frame mountain">
+            <div class="img_wrap">
+                <h5>mountain</h5>
+                <img src="img/mountain.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="img_frame ski">
+            <div class="img_wrap">
+                <h5>ski</h5>
+                <img src="img/ski.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section id="destinations">
+
+    <div class="dest_bg"></div>
+
+    <div class="dest_content">
+
+        <svg class="icon icon-logo">
+            <use xlink:href="img/icons.svg#logo-icon"></use>
+        </svg>
+
+        <h2>destinations</h2>
+
+        <div class="dest owl-carousel owl-theme">
+
+            <div class="carousel_item">
+                <img src="img/slide-2.png" alt="">
+                <div>Somewhere</div>
+                <span></span>
+            </div>
+            <div class="carousel_item">
+                <img src="img/slide-3.jpg" alt="">
+                <div>Mykonos</div>
+                <span></span>
+            </div>
+            <div class="carousel_item">
+                <img src="img/slide-2.png" alt="">
+                <div>Somewhere</div>
+                <span></span>
+            </div>
+            <div class="carousel_item">
+                <img src="img/slide-3.jpg" alt="">
+                <div>Mykonos</div>
+                <span></span>
+            </div>
+            <div class="carousel_item">
+                <img src="img/slide-2.png" alt="">
+                <div>Somewhere</div>
+                <span></span>
+            </div>
+
+        </div>
+
+        <div class="hover_control_left"></div>
+        <div class="hover_control_right"></div>
+        <div class="timeline"></div>
+
+        <div class="actions">
+            <button>
+                <svg class="icon ">
+                    <use xlink:href="img/icons.svg#photos-icon"></use>
+                </svg>
+                <span>View list destinations</span>
+            </button>
+            <button>
+                <span>View map </span>
+                <svg class="icon ">
+                    <use xlink:href="img/icons.svg#point-icon"></use>
+                </svg>
+            </button>
+            <button>
+                <span>Draw</span>
+                <svg class="icon ">
+                    <use xlink:href="img/icons.svg#draw-icon"></use>
+                </svg>
+            </button>
+        </div><!--  /.actions  -->
+
+    </div><!--  /.dest_content  -->
+
+</section>
+
+<section id="reasons">
+
+    <h2>3 reasons</h2>
+
+    <div class="list_container">
+
+        <svg class="icon">
+            <use xlink:href="img/icons.svg#logo-icon"></use>
+        </svg>
+
+        <ol>
+            <li class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <img src="img/flip-1.jpg" alt="">
+                    </div>
+                    <div class="back">
+                        <span>PROFESSIONALLY INSPECTED VILLAS</span>
+                    </div>
+                </div>
+            </li>
+            <li class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <img src="img/flip-1.jpg" alt="">
+                    </div>
+                    <div class="back">
+                        <span>24/7 GUEST SUPPORT</span>
+                    </div>
+                </div>
+            </li>
+            <li class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+
+                    </div>
+                    <div class="back">
+                        <span>Best PRICEs on high quality properties</span>
+                    </div>
+                </div>
+            </li>
+        </ol>
+
+    </div><!--  /.list_container  -->
+
+</section><!--  /#reasons  -->
+
+<footer id="main_footer">
+
+    <div class="reach_us">
+
+        <div class="logo_footer">
+            <span>
+                <svg class="icon">
+                    <use xlink:href="img/icons.svg#logo-icon"></use>
+                </svg>
+            </span>
+        </div><!--  /.logo_footer  -->
+
+        <div class="social">
+            <h6>follow us</h6>
+            <ul>
+                <li><a href="#">
+                    <svg class="icon">
+                        <use xlink:href="img/icons.svg#twitter-icon"></use>
+                    </svg>
+                </a></li>
+                <li><a href="#">
+                    <svg class="icon">
+                        <use xlink:href="img/icons.svg#facebook-icon"></use>
+                    </svg>
+                </a></li>
+                <li><a href="#">
+                    <svg class="icon">
+                        <use xlink:href="img/icons.svg#googleplus-icon"></use>
+                    </svg>
+                </a></li>
+                <li><a href="#">
+                    <svg class="icon">
+                        <use xlink:href="img/icons.svg#share-icon"></use>
+                    </svg>
+                </a></li>
+            </ul>
+        </div><!--  /.social  -->
+
+        <div class="newsletter">
+            <form action="/" method="get">
+                <label for="email">
+                    <span>Join our newsletter</span>
+                    <input id="email" type="email" placeholder="enter your email"></label>
+                <button>
+                    <svg class="icon ">
+                        <use xlink:href="img/icons.svg#arrowr-icon"></use>
+                    </svg>
+                </button>
+            </form>
+        </div><!--  /.newsletter  -->
+
+    </div><!--  /.reach_us  -->
+
+    <div class="more_links">
+
+        <div class="block_property">
+
+            <h5>About Divine Property</h5>
+
+            <nav>
+                <a href="#">home</a>
+                <a href="#">about</a>
+                <a href="#">buy</a>
+                <a href="#">rent</a>
+                <a href="#">manage</a>
+                <a href="#">destinations</a>
+                <a href="#">contact</a>
+            </nav>
+
+        </div>
+
+        <div class="block_collections">
+
+            <h5>Divine collections</h5>
+
+            <nav>
+                <a href="#">Waterfront</a>
+                <a href="#">Close to city</a>
+                <a href="#">Ski</a>
+                <a href="#">Mountain</a>
+                <a href="#">Waterfront</a>
+                <a href="#">Close to city</a>
+                <a href="#">Ski</a>
+                <a href="#">Mountain</a>
+            </nav>
+
+        </div>
+
+        <div class="block_destinations">
+
+            <h5>Top Divine Destinations</h5>
+
+            <nav>
+                <a href="#">Mykonos</a>
+                <a href="#">London</a>
+                <a href="#">Santorini</a>
+                <a href="#">Paros</a>
+                <a href="#">Syros</a>
+                <a href="#">Arachova</a>
+            </nav>
+
+        </div>
+
+    </div><!--  /.more_links  -->
+
+    <div class="footer_btm">
+        <div class="container">
+            <nav>
+                <a href="#">mykonos</a>
+                <a href="#">beirut</a>
+                <a href="#">cairo</a>
+                <a href="#">london</a>
+            </nav>
+            <div class="badges">
+                <img src="img/iso.png" alt="iso standard">
+            </div>
+            <div class="copy">© 2017 Copyright Divine Property.</div>
+            <div class="design">Designed & Developed by <a href="#">
+                <svg class="icon ">
+                    <use xlink:href="img/icons.svg#design-logo"></use>
+                </svg></a></div>
+        </div><!--  /.container  -->
+    </div><!--  /.footer_btm  -->
+
+</footer>
+<script src="js/app.min.js"></script>
+</body>
+</html>

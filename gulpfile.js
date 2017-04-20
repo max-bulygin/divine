@@ -69,3 +69,35 @@ gulp.task('serve', ['scripts', 'styles', 'svgstore'], function() {
     gulp.watch(['assets/dev/js/**/*.js'], ['scripts', reload]);
     gulp.watch(['assets/dev/img/**/*'], ['svgstore', reload]);
 });
+
+gulp.task('copy:html', function () {
+    return gulp.src('views/pages/*.html')
+        .pipe(gulp.dest('docs/'))
+});
+
+gulp.task('copy:img', function () {
+    return gulp.src('assets/dev/img/*.*')
+        .pipe(gulp.dest('docs/img/'))
+});
+
+gulp.task('copy:video', function () {
+    return gulp.src('assets/dev/video/*.*')
+        .pipe(gulp.dest('docs/video'))
+});
+
+gulp.task('copy:js', function () {
+    return gulp.src('assets/build/js/*.*')
+        .pipe(gulp.dest('docs/js'))
+});
+
+gulp.task('copy:css', function () {
+    return gulp.src('assets/build/css/*.*')
+        .pipe(gulp.dest('docs/css'))
+});
+
+gulp.task('copy:fonts', function () {
+    return gulp.src('assets/dev/fonts/**/*.*')
+        .pipe(gulp.dest('docs/fonts'))
+});
+
+gulp.task('build:demo', ['copy:html', 'copy:img', 'copy:video', 'copy:js', 'copy:css', 'copy:fonts']);
