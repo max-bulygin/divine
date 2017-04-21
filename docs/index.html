@@ -35,8 +35,8 @@
                 </svg>
             </div>
 
-            <form action="#">
-                <div class="search_select">
+            <form action="#" method="get" id="head_search">
+                <div class="search_select search_status">
                     <span>Status</span>
                     <select id="status">
                         <option value="hide">Buy or Rent</option>
@@ -45,7 +45,7 @@
                         <option value="Paros">for buy</option>
                     </select>
                 </div>
-                <div class="search_select">
+                <div class="search_select search_destination">
                     <span>Where</span>
                     <select id="destination">
                         <option value="hide">Region, Destination</option>
@@ -57,7 +57,7 @@
                         <option value="London">London</option>
                     </select>
                 </div>
-                <div class="search_select">
+                <div class="search_select search_guests">
                     <span>How many Guests</span>
                     <select id="guests">
                         <option value="hide">Visitors</option>
@@ -70,6 +70,11 @@
                 <button>
                     Find your Divine property
                 </button>
+                <div id="search_close">
+                    <svg class="icon ">
+                        <use xlink:href="img/icons.svg#close-icon"></use>
+                    </svg>
+                </div>
             </form>
 
         </div>
@@ -80,35 +85,100 @@
             </svg>
         </div>
 
-        <div class="menu" id="main_menu">
+    </header>
 
-            <div class="menu_head">
+    <div class="menu" id="main_menu">
 
-                <svg class="icon icon_text">
+        <div class="menu_head">
+
+            <div class="logo">
+                <svg class="icon logo_icon">
+                    <use xlink:href="img/icons.svg#logo-icon"></use>
+                </svg>
+                <svg class="icon logo_text">
                     <use xlink:href="img/icons.svg#divine-text"></use>
                 </svg>
-
-                <a href="callto:899998887878">
-                    <svg class="icon ">
-                        <use xlink:href="img/icons.svg#callus-icon"></use>
-                    </svg>
-                </a>
-
             </div>
 
-            <ul>
+            <a class="call_us" href="callto:899998887878">
+                <span>Need Help? Call us +302109888685</span>
+                <svg class="icon ">
+                    <use xlink:href="img/icons.svg#callus-icon"></use>
+                </svg>
+            </a>
+
+            <div class="close_menu">
+                <svg class="icon ">
+                    <use xlink:href="img/icons.svg#close-icon"></use>
+                </svg>
+            </div>
+
+        </div>
+
+        <nav class="menu_links main">
+
+            <h6>Divine Pages</h6>
+
+            <ul class="parent">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Buy</a></li>
                 <li><a href="#">Rent</a></li>
                 <li><a href="#">Manage</a></li>
-                <li><a href="#">Destinations</a></li>
+                <li><a href="#">Destinations</a>
+                    <ul class="child">
+                        <li id="back"><a href="#"><svg class="icon">
+                            <use xlink:href="img/icons.svg#forma-1"></use>
+                        </svg> Back</a></li>
+                        <li><a href="#">mykonos</a></li>
+                        <li><a href="#">london</a></li>
+                        <li><a href="#">santorini</a></li>
+                        <li><a href="#">paros</a></li>
+                        <li><a href="#">syros</a></li>
+                        <li><a href="#">arachova</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Contact</a></li>
             </ul>
+        </nav>
 
-        </div>
+        <nav class="menu_links clone">
 
-    </header>
+            <h6>Divine DESTINATIONS</h6>
+
+            <ul>
+                <li><a href="#">Destinations</a>
+                    <ul class="child">
+
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <ul class="social">
+            <li><a href="#">
+                <svg class="icon">
+                    <use xlink:href="img/icons.svg#twitter-icon"></use>
+                </svg>
+            </a></li>
+            <li><a href="#">
+                <svg class="icon">
+                    <use xlink:href="img/icons.svg#facebook-icon"></use>
+                </svg>
+            </a></li>
+            <li><a href="#">
+                <svg class="icon">
+                    <use xlink:href="img/icons.svg#googleplus-icon"></use>
+                </svg>
+            </a></li>
+            <li><a href="#">
+                <svg class="icon">
+                    <use xlink:href="img/icons.svg#share-icon"></use>
+                </svg>
+            </a></li>
+        </ul>
+
+    </div>
 
     <div class="aside_links">
 
@@ -282,28 +352,28 @@
         <div class="dest owl-carousel owl-theme">
 
             <div class="carousel_item">
-                <img src="img/slide-2.png" alt="">
-                <div>Somewhere</div>
-                <span></span>
-            </div>
-            <div class="carousel_item">
-                <img src="img/slide-3.jpg" alt="">
+                <a href="#"><img src="img/slide-3.jpg" alt=""></a>
                 <div>Mykonos</div>
                 <span></span>
             </div>
             <div class="carousel_item">
-                <img src="img/slide-2.png" alt="">
-                <div>Somewhere</div>
+                <a href=""><img src="img/slide-2.png" alt=""></a>
+                <div>Athens</div>
                 <span></span>
             </div>
             <div class="carousel_item">
-                <img src="img/slide-3.jpg" alt="">
-                <div>Mykonos</div>
+                <a href=""><img src="img/slide-2.png" alt=""></a>
+                <div>Paros</div>
                 <span></span>
             </div>
             <div class="carousel_item">
-                <img src="img/slide-2.png" alt="">
-                <div>Somewhere</div>
+                <a href=""><img src="img/slide-3.jpg" alt=""></a>
+                <div>Santorini</div>
+                <span></span>
+            </div>
+            <div class="carousel_item">
+                <a href=""><img src="img/slide-2.png" alt=""></a>
+                <div>London</div>
                 <span></span>
             </div>
 
