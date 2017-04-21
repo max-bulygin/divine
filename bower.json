@@ -18,6 +18,8 @@
     "normalize-scss": "normalize.scss#^6.0.0",
     "owl.carousel": "^2.2.1",
     "parallax": "^2.1.3",
-    "backgroundVideo": "linnett/backgroundVideo"
+    "backgroundVideo": "linnett/backgroundVideo",
+    "jparallax": "stephband/jparallax#^2.0.3",
+    "multilevelpushmenu": "adgsm/multi-level-push-menu#^2.1.4"
   }
 }

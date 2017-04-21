@@ -22,8 +22,6 @@
     left: 0
     right: 0
     z-index: -1
-    //background: url("../video/night.png") no-repeat
-    //background-size: cover
     
   .aside_links
     position: absolute
@@ -60,7 +58,7 @@
       align-items: center
       #search_toggle
         display: none
-      @media(max-width: $atLaptops - 1px)
+      @media(max-width: $atLaptopsMd - 1px)
         display: flex
         #search_toggle
           display: block
@@ -68,13 +66,48 @@
           margin-left: auto
           margin-top: 10px
       form
-        display: none
-        @media(min-width: $atLaptops)
-          display: flex
+        display: flex
+        flex-direction: column
+        position: absolute
+        top: -9999px
+        left: 0
+        right: 0
+        background-color: #fff
+        padding: 0 15%
+        box-shadow: 0 14px 20px rgba(#000, .2)
+        &.active
+          top: 122px
+        @media(min-width: $atLaptopsMd)
+          box-shadow: none
+          position: static
+          flex-direction: row
+          padding: 0
+  
         .search_select
-          border-right: 2px solid #f7f7f7
           padding: 32px 15px 0
           flex: 2
+          @media(min-width: $atLaptopsMd)
+            border-right: 2px solid #f7f7f7
+                 
+        .select
+          border-bottom: 2px solid #f1f1ef
+          .select_options
+            position: static
+          @media(min-width: $atLaptopsMd)
+            border-bottom: none
+            .select_options
+              position: absolute
+  
+        .search_guests
+          order: 2
+          @media(min-width: $atLaptopsMd)
+            order: initial
+          
+        .search_status
+          order: 3
+          @media(min-width: $atLaptopsMd)
+            order: initial
+  
         span
           display: block
           color: rgba(#000, .35)
@@ -83,6 +116,7 @@
           text-transform: uppercase
           margin-bottom: 5px
           padding-left: 10px
+          
         button
           color: #fff
           font-family: $font-secondary
@@ -93,7 +127,24 @@
           border-radius: 0
           background-color: $btn
           flex: 3
-          margin: 20px 20px 0
+          order: 4
+          height: 100px
+          line-height: 100px
+          margin: 78px 15px 70px
+          @media(min-width: $atLaptopsMd)
+            margin: 20px 20px 0
+            height: auto
+            line-height: initial
+  
+        #search_close
+          order: 5
+          align-self: center
+          font-size: 38px
+          margin-bottom: 165px
+          cursor: pointer
+          @media(min-width: $atLaptopsMd)
+            display: none
+          
     #menu_toggle
       display: flex
       font-size: 35px
@@ -103,9 +154,11 @@
       padding-right: 1em
       cursor: pointer
       background-color: #fff
-      @media(min-width: $atLaptops)
+      @media(min-width: $atLaptopsMd)
         background-color: transparent
-        fill: #fff
+        color: #fff
+        &:hover
+          color: $dark-gold
     
     .logo
       background-color: #fff
@@ -141,6 +194,7 @@
         margin-left: 1em
   
   .scroll
+    display: none
     color: #000
     font-size: 13px
     font-weight: 700
@@ -154,6 +208,8 @@
     transform: rotate(-90deg)
     transform-origin: 50% 100%
     letter-spacing: 10px
+    @media(min-width: $atLaptopsMd)
+      display: block
     
 
     

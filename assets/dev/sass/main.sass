@@ -6,6 +6,7 @@
 //THEME
 @import "base/variables"
 @import "base/mixins"
+@import "home/menu"
 @import "home/header"
 @import "home/villas"
 @import "home/collections"
@@ -25,6 +26,7 @@ a
   width: 1em
   height: 1em
   position: relative
+  fill: currentColor
   
 .logo
   font-size: 50px
@@ -106,8 +108,9 @@ $select-height: 45px
   font-size: 16px
   color: $select-color
   width: $select-width
-  max-width: 250px
   height: $select-height
+  @media(min-width: $atLaptopsMd)
+    max-width: 250px
 
 .select_styled
   position: absolute
@@ -168,53 +171,3 @@ $select-height: 45px
         background-color: transparent
         cursor: default
         
-// MENU
-
-.menu
-  width: .1px
-  visibility: hidden
-  opacity: 0
-  //display: none
-  transition: width .3s cubic-bezier(0.24, -0.46, 1, 0.09)
-  &.active
-    width: 500px
-    visibility: visible
-    opacity: 1
-    position: absolute
-    top: 0
-    right: 0
-    //display: block
-  .menu_head
-    background-color: #000
-    height: 122px
-    padding-left: 40px
-    padding-right: 40px
-    display: flex
-    justify-content: space-between
-    align-items: center
-    .icon
-      fill: #fff
-      font-size: 55px
-    .icon_text
-      width: 130px
-  ul
-    padding: 54px 0
-    margin: 0
-    background-color: #fff
-    li
-      list-style: none
-      border-left: 10px solid $dark-gold
-      color: #000
-      font-size: 24px
-      text-transform: uppercase
-      &:last-child a
-        border-bottom: 0
-      a
-        padding: 25px 36px 18px
-        text-decoration: none
-        display: inline-block
-        width: 100%
-        border-bottom: 2px solid #f2f2f2
-        box-sizing: border-box
-        &:hover
-          background-color: #f3f3f3

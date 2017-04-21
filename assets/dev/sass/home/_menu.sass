@@ -1,0 +1,215 @@
+// MENU
+
+#main_menu
+  z-index: 120
+  background-color: rgba($dark-gold, .95)
+  overflow-y: auto
+  display: none
+  &.active
+    display: block
+    position: fixed
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+  @media(min-width: $atLaptopsMd)
+    padding-left: 40px
+    padding-right: 40px
+  
+  
+  .menu_head
+    height: 122px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    color: #fff
+    background-color: #000
+    padding-left: 40px
+    padding-right: 40px
+    @media(min-width: $atLaptopsMd)
+      background-color: transparent
+      padding: 0
+      
+    .logo
+      .icon_text
+        width: 130px
+        font-size: 55px
+        margin: 0
+      .logo_icon
+        font-size: 0
+      @media(min-width: $atLaptopsMd)
+        .icon_text
+          margin-left: 15px
+        .logo_icon
+          font-size: 70px
+    
+    .call_us
+      text-decoration: none
+      span
+        display: none
+      .icon
+        font-size: 55px
+      @media(min-width: $atLaptopsMd)
+        padding: 30px 25px
+        color: #fff
+        text-transform: uppercase
+        font-size: 16px
+        background-color: $dark-gold
+        margin-left: auto
+        span
+          display: inline
+        .icon
+          font-size: 0
+          
+    .close_menu
+      display: none
+      @media(min-width: $atLaptopsMd)
+        background-color: #fff
+        display: flex
+        font-size: 28px
+        width: 122px
+        height: 100%
+        cursor: pointer
+        margin-left: 25px
+        .icon
+          margin: auto
+          fill: $dark-gold
+      
+  
+  ul
+    padding: 0
+    margin: 0
+    li
+      list-style: none
+      font-size: 24px
+      text-transform: uppercase
+      
+      
+  .menu_links
+    display: block
+    margin-right: 0
+    @media(min-width: $atLaptopsMd)
+      display: inline-block
+      width: 33%
+      margin-right: 30px
+      
+    &.clone
+      display: none
+      @media(min-width: $atLaptopsMd)
+        display: inline-block
+        vertical-align: top
+    
+    h6
+      display: none
+      color: #000
+      font-size: 18px
+      text-transform: uppercase
+      padding-left: 10px
+      position: relative
+      letter-spacing: .5em
+      &::before
+        content: ''
+        width: 100%
+        height: 1px
+        background-color: #000
+        position: absolute
+        left: 0
+        top: .5em
+      @media(min-width: $atLaptopsMd)
+        display: block
+    
+    ul
+      padding: 54px 0
+      margin: 0
+      background-color: #fff
+    
+      li
+        border-left: 10px solid $dark-gold
+        color: #000
+        font-size: 24px
+        
+        @media(max-width: $atLaptopsMd - 1px)
+          &:last-child a
+            border-bottom: 0
+          
+        a
+          padding: 25px 36px 18px
+          text-decoration: none
+          display: inline-block
+          width: 100%
+          border-bottom: 2px solid #f2f2f2
+          box-sizing: border-box
+          
+          &:hover
+            background-color: #f3f3f3
+            
+      &.parent
+        position: relative
+        transition: left 1s ease
+        &.inactive
+          left: 100%
+    
+      &.child
+        position: absolute
+        top: 0
+        right: 100%
+        width: 100%
+        color: $dark-gold
+        @media(min-width: $atLaptopsMd)
+          position: static
+          li
+            font-size: 16px
+            text-transform: capitalize
+            &::before
+              content: '- '
+            
+      @media(min-width: $atLaptopsMd)
+        background-color: transparent
+        padding: 0
+        
+        li
+          border-left: none
+          color: #fff
+          font-size: 18px
+          margin-bottom: 11px
+          
+          a
+            width: auto
+            border-bottom: 2px dotted transparent
+            transition: border .3s ease
+            padding: 7px 15px
+            
+            &:hover
+              background-color: unset
+              border-bottom-color: currentColor
+
+
+  ul.social
+    display: flex
+    margin-top: 3vw
+    padding-left: 15px
+    .icon
+      fill: #fff
+      margin-right: 50px
+      &:hover
+        opacity: .5
+    @media(max-width: $atLaptopsMd - 1px)
+      display: none
+  
+  @media(max-width: $atLaptopsMd - 1px)
+    width: .1px
+    visibility: hidden
+    opacity: 0
+    transition: width .3s cubic-bezier(0.24, -0.46, 1, 0.09)
+    &.active
+      width: 500px
+      visibility: visible
+      opacity: 1
+      top: 0
+      right: 0
+      
+@media(min-width: $atLaptopsMd)
+  .main .parent [data-expandable="true"],
+  #back
+    display: none
+      
